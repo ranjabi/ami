@@ -1,0 +1,21 @@
+@mixin setup_size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin flex_center($flex) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $flex;
+}
+
+@mixin setup_font($size, $weight, $family) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin default_transition($duration) {
+  transition: all $duration ease;
+}

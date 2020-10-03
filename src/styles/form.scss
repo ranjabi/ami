@@ -1,0 +1,75 @@
+@import "./variables";
+@import "./mixin";
+
+.form {
+  @include setup_size(50vw, 50vh);
+  background-color: #ffffff;
+  padding: 20px 35px;
+}
+
+.form-container {
+  @include setup_size(50vw, 50vh);
+  @include flex_center(column);
+  padding: 20px 35px;
+  & > * {
+    margin-top: 15px;
+  }
+}
+
+.inputField {
+  @include setup_size(100%, auto);
+  min-height: 50px;
+  @include flex_center(column);
+  & > * {
+    width: 100%;
+  }
+  label {
+    @include setup_font(16px, 400, LailaMedium);
+    flex: 1;
+    color: $f_purple;
+    justify-self: flex-start;
+  }
+  input[type="text"] {
+    @include setup_font(20px, 600, LailaMedium);
+    @include default_transition(0.3s);
+    color: $f_purple;
+    flex: 4;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid $a_lightPurple;
+    &:focus {
+      font-size: 24px;
+    }
+  }
+  textarea {
+    @include setup_size(100%, clamp(200px, 250px, 300px));
+    @include setup_font(14px, 400, LailaMedium);
+    @include default_transition(0.3s);
+    color: $f_purple;
+    padding: 5px;
+    min-height: 100px;
+    border-radius: 8px;
+    border: 1px solid $a_lightPurple;
+    resize: none;
+    &:focus {
+      border: 1.5px solid $a_lightPurple;
+      font-size: 16px;
+    }
+  }
+}
+
+.button {
+  @include setup_size(100%, clamp(50px, 75px, 100px));
+  @include setup_font(20px, 800, LailaBold);
+  @include default_transition(0.3s);
+  color: white;
+  background-color: $f_purple2;
+  border: none;
+  border-radius: 8px;
+  margin-top: 50px;
+  &:hover {
+    cursor: pointer;
+    font-size: 24px;
+  }
+}

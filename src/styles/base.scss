@@ -1,0 +1,23 @@
+@import "./variables";
+@import "./mixin";
+
+@font-face {
+  font-family: Kopriva;
+  src: url("./fonts/Kopriva-imperfect-23.otf");
+}
+
+@font-face {
+  font-family: LailaMedium;
+  src: url("./fonts/Laila-Medium.ttf");
+}
+
+@font-face {
+  font-family: LailaBold;
+  src: url("./fonts/Laila-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
