@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "./components/footer/Footer";
 import { InputField, Button, TextArea } from "./components/Form";
 import "./styles/base.scss";
 
@@ -55,6 +56,7 @@ class App extends React.Component {
             onClickParams={"Clicked"}
           />
         </div>
+        <Footer />
       </div>
     );
   }
