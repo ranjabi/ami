@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+.navbar-button {
+  position: relative;
+  h4 {
+    color : $a_lightPurple;
+    transition : color 0.25s ease;
+    font-size:24px;
+  }
+  &:hover h4{
+    color : $f_purple;
+  }
+  span.line {
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: $a_lightPurple;
+    left: 50%;
+    bottom: 0;
+    transform:translateX(-50%);
+    transition: width 0.25s ease;
+  }
+  &:hover span.line {
+    width: 100%;
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Footer } from "./components/footer/Footer";
+import { Navbar } from "./components/Navbar/Navbar";
 import { InputField, Button, TextArea } from "./components/Form";
 import "./styles/base.scss";
 
@@ -34,6 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
+        <Navbar />
         <div className="form-container">
           <InputField
             hasLabel={true}
