@@ -8,10 +8,11 @@
 }
 .navbar-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   display: flex;
   align-items: center;
-
+  padding : 0 20px;
+  
 
   a {
     margin: 0px 30px;
@@ -19,5 +20,11 @@
   a:first-child {
     margin : 0;
     margin-right: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .navbar-container {
+    justify-content: flex-end;
+
   }
 }

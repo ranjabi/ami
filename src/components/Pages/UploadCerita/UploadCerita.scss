@@ -1,0 +1,66 @@
+.UploadCerita-wrapper {
+  min-height: 100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../../images/BG.svg");
+  background-size: cover;
+  .UploadCerita-containter {
+    width:100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    padding : 0px 20px;
+  }
+
+  .UploadCerita-badge {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+      font-size:clamp(40px,5vw,60px);
+      font-weight: normal;
+    }
+  }
+  .UploadCerita-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    button {
+      height: clamp(40px,4vw,50px);
+    }
+  }
+  img {
+    height: clamp(300px,30vw,450px);
+    margin-top: 10px;
+  }
+}
+@media (max-width: 480px) {
+    .UploadCerita-wrapper{
+      .UploadCerita-containter {
+        flex-direction: column;
+        align-items: center;
+      }
+      .UploadCerita-form {
+        width: 100%;
+        & > * {
+          margin : 0;
+        }
+        & button {
+          margin-top: 10px;
+          height: 50px;
+        }
+      }
+      img {
+        display: none;
+      }
+    }
+
+
+}

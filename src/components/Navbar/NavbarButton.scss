@@ -2,9 +2,11 @@
 .navbar-button {
   position: relative;
   h4 {
+    text-align: center;
     color : $a_lightPurple;
     transition : color 0.25s ease;
-    font-size:24px;
+    font-size:clamp(1.2rem,3vw,1.7rem);
+
   }
   &:hover h4{
     color : $f_purple;
@@ -22,4 +24,11 @@
   &:hover span.line {
     width: 100%;
   }
+}
+@media (max-width: 480px) {
+    .navbar-button {
+      h4 {
+        font-size:17px;
+      }
+    }
 }

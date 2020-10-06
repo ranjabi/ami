@@ -7,7 +7,7 @@ const InputField = (props) => (
     <input
       type={props.inputType}
       name={props.name}
-      onChange={(e) => props.handleChange(e)}
+      onChange={(e) => props.handleChange(e.target.value)}
       value={props.value}
     ></input>
   </div>
@@ -19,7 +19,7 @@ const TextArea = (props) => (
     <textarea
       name={props.name}
       value={props.value}
-      onChange={(e) => props.handleChange(e)}
+      onChange={(e) => props.handleChange(e.target.value)}
       rows={4}
     />
   </div>
