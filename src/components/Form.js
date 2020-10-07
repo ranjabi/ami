@@ -26,7 +26,12 @@ const TextArea = (props) => (
 );
 
 const Button = (props) => (
-  <button className="button" onClick={props.doNothing? ()=>{} : () => props.onClick(props.onClickParams)}>
+  <button
+    className="button"
+    onClick={
+      props.doNothing ? () => {} : () => props.onClick(props.onClickParams)
+    }
+  >
     {props.text}
   </button>
 );
@@ -40,7 +45,7 @@ const Dropdown = (props) => (
       value={props.value}
     >
       {props.options.map((row) => (
-        <option>{row}</option>
+        <option key={row}>{row}</option>
       ))}
     </select>
   </div>

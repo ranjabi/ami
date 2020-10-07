@@ -1,14 +1,14 @@
 @import "../../../styles/variables";
 
 .AboutUsSection-wrapper {
-  margin-top: 50px;
+  padding-top: 100px;
   width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x:hidden;
+  overflow-x: hidden;
   position: relative;
-  min-height: calc(100vh + 200px);
   .AboutUsSection-awan {
     position: absolute;
     left: 0;
@@ -17,11 +17,11 @@
   }
 
   .AboutUsSection-container {
-    transform: translateY(-150px);
+    transform: translateY(-100px);
     width: 100%;
     max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     align-items: center;
     .AboutUsSection-logo {
@@ -36,7 +36,7 @@
         line-height: 1.5;
         position: relative;
         margin-bottom: 20px;
-        font-size:clamp(30px,5.8vw,60px);
+        font-size: clamp(30px, 5.8vw, 60px);
       }
       h1::after {
         content: "";
@@ -49,7 +49,7 @@
       }
       p {
         font-family: LailaMedium;
-        color : $f_purple;
+        color: $f_purple;
       }
     }
   }
@@ -70,7 +70,7 @@
       }
 
       .AboutUsSection-text {
-        padding : 0px 30px;
+        padding: 0px 30px;
         h1 {
           text-align: center;
           position: relative;
@@ -83,14 +83,13 @@
           height: 2px;
           background-color: $a_lightPurple;
           bottom: 0;
-          left : 50%;
+          left: 50%;
           transform: translateX(-50%);
         }
         p {
-          padding : 0px 10px;
+          padding: 0px 10px;
         }
       }
-
     }
   }
 }

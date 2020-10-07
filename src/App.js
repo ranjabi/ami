@@ -4,7 +4,12 @@ import React from "react";
 // import { InputField, Button, TextArea } from "./components/Form";
 import { UploadCerita } from "./components/Pages/UploadCerita/UploadCerita";
 import { Homepage } from "./components/Pages/Homepage/Homepage";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import "./styles/base.scss";
 
 class App extends React.Component {
@@ -12,8 +17,13 @@ class App extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" render={(props)=><Homepage {...props}/>}/>
-          <Route exact path="/UploadCerita" render={(props)=><UploadCerita {...props}/>}/>
+          <Route exact path="/" render={(props) => <Homepage {...props} />} />
+          <Route
+            exact
+            path="/UploadCerita"
+            render={(props) => <UploadCerita {...props} />}
+          />
+          <Redirect to="/" />
         </Switch>
       </Router>
     );

@@ -3,13 +3,12 @@
   position: relative;
   h4 {
     text-align: center;
-    color : $a_lightPurple;
-    transition : color 0.25s ease;
-    font-size:clamp(1.2rem,3vw,1.7rem);
-
+    color: $f_purple2;
+    transition: color 0.25s ease;
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
   }
-  &:hover h4{
-    color : $f_purple;
+  &:hover h4 {
+    color: $f_purple;
   }
   span.line {
     position: absolute;
@@ -18,7 +17,7 @@
     background-color: $a_lightPurple;
     left: 50%;
     bottom: 0;
-    transform:translateX(-50%);
+    transform: translateX(-50%);
     transition: width 0.25s ease;
   }
   &:hover span.line {
@@ -26,9 +25,9 @@
   }
 }
 @media (max-width: 480px) {
-    .navbar-button {
-      h4 {
-        font-size:17px;
-      }
+  .navbar-button {
+    h4 {
+      font-size: 17px;
     }
+  }
 }

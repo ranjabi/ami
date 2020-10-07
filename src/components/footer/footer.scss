@@ -9,24 +9,26 @@
   background-image: url("../../images/Bata.jpg");
   background-size: cover;
   border-top: 5px solid $a_lightPurple;
-  padding: 2.5vh;
+  padding: clamp(20px, 2.5vh, 120px);
 }
 
 .footer-icons {
-  height: 20%;
+  height: clamp(40px, 7.2vw, 64px);
+  margin: 10px 0;
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 
   .footer-icon {
-    height: 40px;
-    width: 40px;
+    height: 90%;
+    width: auto;
+    max-width: 70px;
     margin: 0 10px;
     transition: transform 0.25s;
     svg {
-      height: 36px;
-      width: 36px;
+      height: 100%;
+      width: 100%;
       color: $f_purple;
     }
     &:hover {
@@ -35,5 +37,11 @@
         color: $f_purple2;
       }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    height: 30vh;
   }
 }

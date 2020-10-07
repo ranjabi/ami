@@ -22,23 +22,30 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("../images/BG.svg");
+  background-size: cover;
+}
+
 h1 {
   font-family: Kopriva;
   font-size: 60px;
   color: $f_purple;
   text-transform: uppercase;
+  font-size: clamp(28px, 7.2vw, 72px);
 }
 
 h4 {
   font-family: LailaBold;
-  font-size: 24px;
+  font-size: clamp(14px, 4vw, 36px);
   color: $f_purple;
 }
+
 a {
   text-decoration: none;
-  color : inherit;
+  color: inherit;
 }
-.linkBuutton{
-  @include setup_size(100%,100%);
+.linkBuutton {
+  @include setup_size(100%, 100%);
   @include flex_center(row);
 }

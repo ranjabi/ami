@@ -30,7 +30,8 @@
     color: $f_purple;
     justify-self: flex-start;
   }
-  input[type="text"], select {
+  input[type="text"],
+  select {
     @include setup_font(20px, 600, LailaMedium);
     @include default_transition(0.3s);
     color: $f_purple;
@@ -43,7 +44,7 @@
       font-size: 24px;
     }
   }
-  option{
+  option {
     @include setup_font(14px, 400, LailaMedium);
   }
   textarea {
@@ -74,6 +75,6 @@
   margin-top: 50px;
   &:hover {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 22px;
   }
 }

@@ -1,13 +1,11 @@
 .UploadCerita-wrapper {
   position: relative;
   min-height: 100vh;
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../../../images/BG.svg");
-  background-size: cover;
-  padding : 50px 0;
+  padding: 50px 0;
   .UploadCerita-teratai-image {
     display: none;
     position: absolute;
@@ -15,12 +13,12 @@
     right: 0;
   }
   .UploadCerita-containter {
-    width:100%;
+    width: 100%;
     max-width: 1000px;
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    padding : 0px 20px;
+    padding: 0px 20px;
   }
 
   .UploadCerita-badge {
@@ -32,7 +30,7 @@
 
     h1 {
       text-align: center;
-      font-size:clamp(50px,5vw,70px);
+      font-size: clamp(50px, 5vw, 70px);
       font-weight: normal;
     }
   }
@@ -42,40 +40,38 @@
     flex-direction: column;
     justify-content: space-around;
     button {
-      height: clamp(40px,4vw,50px);
+      height: clamp(40px, 4vw, 50px);
     }
   }
   .UploadCerita-perisai-image {
-    height: clamp(400px,30vw,500px);
+    height: clamp(400px, 30vw, 500px);
     margin-top: 10px;
   }
 }
 @media (max-width: 480px) {
-    .UploadCerita-wrapper{
-      padding : 100px 0;
-      .UploadCerita-teratai-image {
-        display: block;
-        width: 20%;
+  .UploadCerita-wrapper {
+    padding: 100px 0;
+    .UploadCerita-teratai-image {
+      display: block;
+      width: 20%;
+    }
+    .UploadCerita-containter {
+      padding: 0 40px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .UploadCerita-form {
+      width: 100%;
+      & > * {
+        margin: 0;
       }
-      .UploadCerita-containter {
-        padding : 0 40px;
-        flex-direction: column;
-        align-items: center;
-      }
-      .UploadCerita-form {
-        width: 100%;
-        & > * {
-          margin : 0;
-        }
-        & button {
-          margin-top: 10px;
-          height: 45px;
-        }
-      }
-      .UploadCerita-perisai-image {
-        display: none;
+      & button {
+        margin-top: 10px;
+        height: 45px;
       }
     }
-
-
+    .UploadCerita-perisai-image {
+      display: none;
+    }
+  }
 }

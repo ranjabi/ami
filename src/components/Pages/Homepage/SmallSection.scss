@@ -5,11 +5,12 @@
   align-items: center;
   justify-content: center;
   text-align: left;
+  padding: 0 0 50px 0;
 
   .SmallSection-container {
     width: 100%;
     max-width: 1000px;
-    padding : 30px 50px;
+    padding: 0 50px 30px 50px;
     display: grid;
     grid-template-columns: 6fr 2fr;
     grid-gap: 20px;
@@ -23,7 +24,7 @@
       }
       p {
         font-family: LailaMedium;
-        color : $f_purple;
+        color: $f_purple;
       }
     }
     img {
@@ -31,7 +32,7 @@
     }
 
     &.reverse {
-      grid-template-columns : 2fr 6fr;
+      grid-template-columns: 2fr 6fr;
       align-items: center;
       grid-auto-flow: dense;
     }
@@ -43,20 +44,19 @@
       grid-column: 1 / span 1;
     }
   }
-
 }
 
 @media (max-width: 480px) {
   .SmallSection-wrapper {
     .SmallSection-container {
-      padding : 50px 30px;
+      // padding: 50px 30px;
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
       grid-template-columns: none;
 
       .SmallSection-text {
-        h1  {
+        h1 {
           text-align: center;
           position: relative;
           margin-bottom: 20px;
@@ -71,7 +71,7 @@
           background-color: $a_lightPurple;
         }
         p {
-          padding : 0px 10px;
+          padding: 0px 10px;
         }
       }
       img {
@@ -79,5 +79,4 @@
       }
     }
   }
-
 }
