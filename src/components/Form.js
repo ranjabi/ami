@@ -26,7 +26,7 @@ const TextArea = (props) => (
 );
 
 const Button = (props) => (
-  <button className="button" onClick={() => props.onClick(props.onClickParams)}>
+  <button className="button" onClick={props.doNothing? ()=>{} : () => props.onClick(props.onClickParams)}>
     {props.text}
   </button>
 );

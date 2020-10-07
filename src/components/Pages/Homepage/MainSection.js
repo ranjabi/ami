@@ -18,7 +18,10 @@ export const MainSection = () => {
         <img src={Logo} className="MainSection-logo"/>
         <h1>AMI 2021</h1>
         <p>Aku Masuk ITB 2021</p>
-        <Button text="Cerita Inspiratif"/>
+        
+        <a href="/UploadCerita" className="linkBuutton">
+          <Button text="Cerita Inspiratif" doNothing/>
+        </a>
       </div>
     </div>
   )
