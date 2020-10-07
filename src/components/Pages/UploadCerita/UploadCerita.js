@@ -3,7 +3,7 @@ import {Navbar} from "../../Navbar/Navbar.js"
 import {Footer} from "../../footer/Footer.jsx"
 import {InputField, TextArea, Button} from "../../Form.js"
 import PerisaiImage from "../../../images/Perisai 1.svg"
-import TerataiImage from "../../../images/Teratai 1.png"
+import TerataiImage from "../../../images/Teratai 1 Mobile.png"
 
 import "./UploadCerita.scss"
 
