@@ -31,4 +31,19 @@ const Button = (props) => (
   </button>
 );
 
-export { InputField, Button, TextArea };
+const Dropdown = (props) => (
+  <div className="inputField">
+    {props.hasLabel && <label>{props.label}</label>}
+    <select
+      name={props.name}
+      onChange={(e) => props.handleChange(e.target.value)}
+      value={props.value}
+    >
+      {props.options.map((row) => (
+        <option>{row}</option>
+      ))}
+    </select>
+  </div>
+);
+
+export { InputField, Button, TextArea, Dropdown };

@@ -20,6 +20,7 @@
   @include setup_size(100%, auto);
   min-height: 50px;
   @include flex_center(column);
+  margin-top: 10px;
   & > * {
     width: 100%;
   }
@@ -29,7 +30,7 @@
     color: $f_purple;
     justify-self: flex-start;
   }
-  input[type="text"] {
+  input[type="text"], select {
     @include setup_font(20px, 600, LailaMedium);
     @include default_transition(0.3s);
     color: $f_purple;
@@ -41,6 +42,9 @@
     &:focus {
       font-size: 24px;
     }
+  }
+  option{
+    @include setup_font(14px, 400, LailaMedium);
   }
   textarea {
     @include setup_size(100%, clamp(200px, 250px, 300px));

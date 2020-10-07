@@ -1,9 +1,9 @@
 import React from "react";
-import { Footer } from "./components/footer/Footer";
-import { Navbar } from "./components/Navbar/Navbar";
-import { InputField, Button, TextArea } from "./components/Form";
-import {UploadCerita} from "./components/Pages/UploadCerita/UploadCerita"
-import { Homepage } from "./components/Pages/Homepage/Homepage"
+// import { Footer } from "./components/footer/Footer";
+// import { Navbar } from "./components/Navbar/Navbar";
+// import { InputField, Button, TextArea } from "./components/Form";
+import { UploadCerita } from "./components/Pages/UploadCerita/UploadCerita";
+import { Homepage } from "./components/Pages/Homepage/Homepage";
 import "./styles/base.scss";
 
 class App extends React.Component {
@@ -37,8 +37,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Navbar />
-        <div className="form-container">
+        {/* <Navbar /> */}
+        {/* <div className="form-container">
           <InputField
             hasLabel={true}
             label="nama"
@@ -60,7 +60,7 @@ class App extends React.Component {
             onClickParams={"Clicked"}
           />
         </div>
-        <Footer />
+        <Footer /> */}
         <UploadCerita />
         <Homepage />
       </div>
