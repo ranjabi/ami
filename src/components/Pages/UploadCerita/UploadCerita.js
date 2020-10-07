@@ -1,7 +1,9 @@
 import React,{useState} from 'react';
 import {Navbar} from "../../Navbar/Navbar.js"
+import {Footer} from "../../footer/Footer.jsx"
 import {InputField, TextArea, Button} from "../../Form.js"
 import PerisaiImage from "../../../images/Perisai 1.svg"
+import TerataiImage from "../../../images/Teratai 1.png"
 
 import "./UploadCerita.scss"
 
@@ -20,7 +22,7 @@ export const UploadCerita = () => {
               <br></br>
               KISAHMU!
             </h1>
-            <img src={PerisaiImage} alt="Upload Cerita"></img>
+            <img src={PerisaiImage} className="UploadCerita-perisai-image" alt="Upload Cerita"></img>
           </div>
           <div className="UploadCerita-form">
             <InputField label="Nama" hasLabel inputType="text" value={nama} handleChange={setNama}/>
@@ -30,7 +32,9 @@ export const UploadCerita = () => {
             <Button text="Send Your Story"/>
           </div>
         </div>
+        <img src={TerataiImage} className="UploadCerita-teratai-image"/>
       </div>
+      <Footer />
     </div>
   )
 }

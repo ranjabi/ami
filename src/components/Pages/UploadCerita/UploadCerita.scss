@@ -1,4 +1,5 @@
 .UploadCerita-wrapper {
+  position: relative;
   min-height: 100vh;
   width:100%;
   display: flex;
@@ -6,6 +7,13 @@
   align-items: center;
   background: url("../../../images/BG.svg");
   background-size: cover;
+  padding : 50px 0;
+  .UploadCerita-teratai-image {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
   .UploadCerita-containter {
     width:100%;
     max-width: 1000px;
@@ -36,14 +44,20 @@
       height: clamp(40px,4vw,50px);
     }
   }
-  img {
+  .UploadCerita-perisai-image {
     height: clamp(300px,30vw,450px);
     margin-top: 10px;
   }
 }
 @media (max-width: 480px) {
     .UploadCerita-wrapper{
+      padding : 100px 0;
+      .UploadCerita-teratai-image {
+        display: block;
+        width: 20%;
+      }
       .UploadCerita-containter {
+        padding : 0 40px;
         flex-direction: column;
         align-items: center;
       }
@@ -54,10 +68,10 @@
         }
         & button {
           margin-top: 10px;
-          height: 50px;
+          height: 45px;
         }
       }
-      img {
+      .UploadCerita-perisai-image {
         display: none;
       }
     }
