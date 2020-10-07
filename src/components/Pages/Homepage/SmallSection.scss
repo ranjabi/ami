@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   text-align: left;
-  
+
   .SmallSection-container {
     width: 100%;
     max-width: 1000px;
@@ -49,7 +49,7 @@
 @media (max-width: 480px) {
   .SmallSection-wrapper {
     .SmallSection-container {
-      padding : 50px 20px;
+      padding : 50px 30px;
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
