@@ -3,6 +3,7 @@ import { Footer } from "./components/footer/Footer";
 import { Navbar } from "./components/Navbar/Navbar";
 import { InputField, Button, TextArea } from "./components/Form";
 import {UploadCerita} from "./components/Pages/UploadCerita/UploadCerita"
+import { Homepage } from "./components/Pages/Homepage/Homepage"
 import "./styles/base.scss";
 
 class App extends React.Component {
@@ -61,6 +62,7 @@ class App extends React.Component {
         </div>
         <Footer />
         <UploadCerita />
+        <Homepage />
       </div>
     );
   }

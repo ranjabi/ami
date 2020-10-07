@@ -1,0 +1,83 @@
+@import "../../../styles/variables";
+.SmallSection-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  
+  .SmallSection-container {
+    width: 100%;
+    max-width: 1000px;
+    padding : 30px 50px;
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    grid-gap: 20px;
+    align-items: center;
+
+    .SmallSection-text {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-weight: normal;
+      }
+      p {
+        font-family: LailaMedium;
+        color : $f_purple;
+      }
+    }
+    img {
+      width: 100%;
+    }
+
+    &.reverse {
+      grid-template-columns : 2fr 6fr;
+      align-items: center;
+      grid-auto-flow: dense;
+    }
+
+    &.reverse .SmallSection-text {
+      grid-column: 2 / span 1;
+    }
+    &.reverse img {
+      grid-column: 1 / span 1;
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  .SmallSection-wrapper {
+    .SmallSection-container {
+      padding : 50px 20px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      grid-template-columns: none;
+
+      .SmallSection-text {
+        h1  {
+          text-align: center;
+          position: relative;
+          margin-bottom: 20px;
+        }
+        h1::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $a_lightPurple;
+        }
+        p {
+          padding : 0px 10px;
+        }
+      }
+      img {
+        width: 30%;
+      }
+    }
+  }
+
+}
