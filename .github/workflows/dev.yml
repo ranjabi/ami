@@ -24,9 +24,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install Packages
       run: npm install
+    - name: Build page
       env:
         CI: false
-    - name: Build page
       run: npm run build
     - name: Archive development artifacts
       uses: actions/upload-artifact@v1
