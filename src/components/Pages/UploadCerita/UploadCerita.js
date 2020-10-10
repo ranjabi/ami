@@ -14,84 +14,84 @@ export const UploadCerita = () => {
   const [email, setEmail] = useState("");
   const [cerita, setCerita] = useState("");
 
-  // const daftar_fakultas = [
-  //   "FITB",
-  //   "FMIPA",
-  //   "FSRD",
-  //   "FTI",
-  //   "FTMD",
-  //   "FTTM",
-  //   "FTSL",
-  //   "SAPPK",
-  //   "SBM",
-  //   "SF",
-  //   "SITH",
-  //   "STEI",
-  // ];
+  const daftar_fakultas = [
+    "FITB",
+    "FMIPA",
+    "FSRD",
+    "FTI",
+    "FTMD",
+    "FTTM",
+    "FTSL",
+    "SAPPK",
+    "SBM",
+    "SF",
+    "SITH",
+    "STEI",
+  ];
 
-  // const daftar_jurusan = {
-  //   FITB: [
-  //     "TEKNIK GEOLOGI",
-  //     "TEKNIK GEODESI DAN GEOMATIKA",
-  //     "METEOROLOGI",
-  //     "OSEANOGRAFI",
-  //   ],
-  //   FMIPA: ["MATEMATIKA", "FISIKA", "ASTRONOMI", "KIMIA", "AKTUARIA"],
-  //   FSRD: [
-  //     "SENI RUPA",
-  //     "KRIA",
-  //     "DESAIN INTERIOR",
-  //     "DESAIN KOMUNIKASI VISUAL",
-  //     "DESAIN PRODUK",
-  //   ],
-  //   FTI: [
-  //     "TEKNIK KIMIA",
-  //     "TEKNIK FISIKA",
-  //     "TEKNIK INDUSTRI",
-  //     "MANAJEMEN REKAYASA INDUSTRI",
-  //     "TEKNIK PANGAN",
-  //     "TEKNIK BIOENERGI DAN KEMURDI",
-  //   ],
-  //   FTMD: ["TEKNIK MESIN", "TEKNIK DIRGANTARA", "TEKNIK MATERIAL"],
-  //   FTTM: [
-  //     "TEKNIK PERTAMBANGAN",
-  //     "TEKNIK PERRMINYAKAN",
-  //     "TEKNIK GEOFISIKA",
-  //     "TEKNIK METALURGI",
-  //   ],
-  //   FTSL: [
-  //     "TEKNIK SIPIL",
-  //     "TEKNIK LINGKUNGAN",
-  //     "TEKNIK KELAUTAN",
-  //     "TEKNIK DAN PENGELOLAAN SUMBER DAYA AIR",
-  //     "REKAYASA INFRASTRUKTUR LINGKUNGAN",
-  //   ],
-  //   SAPPK: ["ARSITEKTUR", "PERENCANAAN WILAYAH DAN KOTA"],
-  //   SBM: ["MANAJEMEN", "KEWIRAUSAHAAN"],
-  //   SF: ["Sains dan Teknologi Farmasi", "Farmasi Klinik dan Komunitas"],
-  //   SITH: [
-  //     "BIOLOGI",
-  //     "MIKROBIOLOGI",
-  //     "REKAYASA HAYATI",
-  //     "REKAYASA PERTANIAN",
-  //     "REKAYASA KEHUTANAN",
-  //     "TEKNOLOGI PASCA PANEN",
-  //   ],
-  //   STEI: [
-  //     "TEKNIK ELEKTRO",
-  //     "TEKNIK INFORMATIKA",
-  //     "TEKNIK TENAGA LISTRIK",
-  //     "TEKNIK TELEKOMUNIKASI",
-  //     "SISTEM DAN TEKNOLOGI INFORMASI",
-  //     "TEKNIK BIOMEDIS",
-  //   ],
-  // };
-
-  const daftar_jurusan = async () => {
-    const data = await axios.get("http://api.akumasukitb.com/api/fakultas");
-    console.log(data);
+  const daftar_jurusan = {
+    FITB: [
+      "TEKNIK GEOLOGI",
+      "TEKNIK GEODESI DAN GEOMATIKA",
+      "METEOROLOGI",
+      "OSEANOGRAFI",
+    ],
+    FMIPA: ["MATEMATIKA", "FISIKA", "ASTRONOMI", "KIMIA", "AKTUARIA"],
+    FSRD: [
+      "SENI RUPA",
+      "KRIA",
+      "DESAIN INTERIOR",
+      "DESAIN KOMUNIKASI VISUAL",
+      "DESAIN PRODUK",
+    ],
+    FTI: [
+      "TEKNIK KIMIA",
+      "TEKNIK FISIKA",
+      "TEKNIK INDUSTRI",
+      "MANAJEMEN REKAYASA INDUSTRI",
+      "TEKNIK PANGAN",
+      "TEKNIK BIOENERGI DAN KEMURDI",
+    ],
+    FTMD: ["TEKNIK MESIN", "TEKNIK DIRGANTARA", "TEKNIK MATERIAL"],
+    FTTM: [
+      "TEKNIK PERTAMBANGAN",
+      "TEKNIK PERRMINYAKAN",
+      "TEKNIK GEOFISIKA",
+      "TEKNIK METALURGI",
+    ],
+    FTSL: [
+      "TEKNIK SIPIL",
+      "TEKNIK LINGKUNGAN",
+      "TEKNIK KELAUTAN",
+      "TEKNIK DAN PENGELOLAAN SUMBER DAYA AIR",
+      "REKAYASA INFRASTRUKTUR LINGKUNGAN",
+    ],
+    SAPPK: ["ARSITEKTUR", "PERENCANAAN WILAYAH DAN KOTA"],
+    SBM: ["MANAJEMEN", "KEWIRAUSAHAAN"],
+    SF: ["Sains dan Teknologi Farmasi", "Farmasi Klinik dan Komunitas"],
+    SITH: [
+      "BIOLOGI",
+      "MIKROBIOLOGI",
+      "REKAYASA HAYATI",
+      "REKAYASA PERTANIAN",
+      "REKAYASA KEHUTANAN",
+      "TEKNOLOGI PASCA PANEN",
+    ],
+    STEI: [
+      "TEKNIK ELEKTRO",
+      "TEKNIK INFORMATIKA",
+      "TEKNIK TENAGA LISTRIK",
+      "TEKNIK TELEKOMUNIKASI",
+      "SISTEM DAN TEKNOLOGI INFORMASI",
+      "TEKNIK BIOMEDIS",
+    ],
   };
-  daftar_jurusan();
+
+  // const daftar_jurusan = async () => {
+  //   const data = await axios.get("http://api.akumasukitb.com/api/fakultas");
+  //   console.log(data);
+  // };
+  // daftar_jurusan();
 
   return (
     <div>
@@ -118,7 +118,7 @@ export const UploadCerita = () => {
               value={nama}
               handleChange={setNama}
             />
-            {/* <Dropdown
+            <Dropdown
               label="Fakultas"
               hasLabel
               value={fakultas}
@@ -133,7 +133,7 @@ export const UploadCerita = () => {
                 options={daftar_jurusan[fakultas]}
                 handleChange={setJurusan}
               />
-            )} */}
+            )}
             <InputField
               label="Email"
               hasLabel
