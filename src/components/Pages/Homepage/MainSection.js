@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../../images/Logo.png";
 import Tebing from "../../../images/Group 1.png";
 import Teratai1 from "../../../images/Teratai 1.png";
@@ -19,9 +20,9 @@ export const MainSection = () => {
         <h1>AMI 2021</h1>
         <p>Aku Masuk ITB 2021</p>
 
-        <a href="/UploadCerita" className="linkBuutton">
+        <Link to="/UploadCerita" className="linkBuutton">
           <Button text="Cerita Inspiratif" doNothing />
-        </a>
+        </Link>
       </div>
     </div>
   );
