@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.scss";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { RiLineLine, RiYoutubeLine } from "react-icons/ri";
 
 export const Footer = () => {
