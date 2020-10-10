@@ -18,6 +18,7 @@
 
 .inputField {
   @include setup_size(100%, auto);
+  padding: 10px 0;
   min-height: 50px;
   @include flex_center(column);
   margin-top: 10px;
@@ -27,21 +28,21 @@
   label {
     @include setup_font(16px, 400, LailaMedium);
     flex: 1;
-    color: $f_purple;
+    color: $f_mainColor;
     justify-self: flex-start;
   }
   input[type="text"],
   select {
-    @include setup_font(20px, 600, LailaMedium);
+    @include setup_font(18px, 600, LailaMedium);
     @include default_transition(0.3s);
-    color: $f_purple;
+    color: $f_mainColor;
     flex: 4;
     border: 0;
     outline: 0;
     background: transparent;
     border-bottom: 1px solid $a_lightPurple;
     &:focus {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
   option {
@@ -51,7 +52,7 @@
     @include setup_size(100%, clamp(200px, 250px, 300px));
     @include setup_font(14px, 400, LailaMedium);
     @include default_transition(0.3s);
-    color: $f_purple;
+    color: $f_mainColor;
     padding: 5px;
     min-height: 100px;
     border-radius: 8px;
@@ -69,7 +70,7 @@
   @include setup_font(20px, 800, LailaBold);
   @include default_transition(0.3s);
   color: white;
-  background-color: $f_purple2;
+  background-color: $f_mainColor2;
   border: none;
   border-radius: 8px;
   margin-top: 50px;

@@ -1,36 +1,21 @@
 @import "../../../styles/variables";
 .MainSection-wrapper {
+  overflow-x: hidden;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: calc(100vh - 100px);
+  position: absolute;
   // min-height: calc(100vh + 100px);
   padding: 0px 0px;
   position: relative;
-  .MainSection-tebing {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 90%;
-  }
-  .MainSection-teratai1 {
-    position: absolute;
-    left: 21%;
-    bottom: 8%;
-    width: 15%;
-  }
-  .MainSection-teratai2 {
-    position: absolute;
-    width: 18%;
-    left: 0px;
-    bottom: 10%;
-  }
   .MainSection-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(-15%);
+    height: 80vh;
+
     h1 {
       font-size: clamp(60px, 7.2vw, 120px);
       font-weight: normal;
@@ -39,40 +24,37 @@
     p {
       font-family: LailaMedium;
       font-size: 1.25em;
-      color: $f_purple;
+      color: $f_mainColor;
     }
 
     .MainSection-logo {
-      display: none;
+      height: 60%;
     }
 
     button {
+      margin: 0;
       width: 80%;
       height: 50px;
     }
   }
+  .MainSection-tebing {
+    position: absolute;
+    height: 100%;
+    transform: translate(120%, 0%);
+  }
 }
 @media (max-width: 480px) {
   .MainSection-wrapper {
-    height: 100vh;
+    margin-top: 5vh;
+    height: 80vh;
     // min-height: calc(100vh + 400px);
     .MainSection-tebing {
       display: none;
     }
-    .MainSection-teratai1 {
-      width: 40%;
-      right: 5%;
-      left: auto;
-      bottom: 0;
-    }
-    .MainSection-teratai2 {
-      width: 50%;
-      bottom: 4%;
-    }
     .MainSection-container {
+      justify-content: center;
       .MainSection-logo {
-        display: block;
-        width: 50%;
+        height: 60%;
       }
       button {
         width: 60%;

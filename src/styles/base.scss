@@ -29,16 +29,17 @@ body {
 
 h1 {
   font-family: Kopriva;
+  font-weight: normal;
   font-size: 60px;
-  color: $f_purple;
+  color: $f_mainColor2;
   text-transform: uppercase;
   font-size: clamp(28px, 7.2vw, 72px);
 }
 
 h4 {
   font-family: LailaBold;
-  font-size: clamp(14px, 4vw, 36px);
-  color: $f_purple;
+  font-size: clamp(14px, 2vw, 18px);
+  color: $f_mainColor;
 }
 
 a {

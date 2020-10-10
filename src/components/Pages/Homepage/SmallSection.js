@@ -12,7 +12,17 @@ export const SmallSection = ({ title, description, reverse, image }) => {
       >
         <div className="SmallSection-text">
           <h1>{title}</h1>
-          <p>{description}</p>
+          {description.length > 1 ? (
+            <p>
+              <ul>
+                {description.map((desc) => (
+                  <li key={desc}>{desc}</li>
+                ))}
+              </ul>
+            </p>
+          ) : (
+            <p>{description}</p>
+          )}
         </div>
         <img src={image} alt="small section" />
       </div>

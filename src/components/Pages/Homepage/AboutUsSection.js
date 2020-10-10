@@ -1,18 +1,22 @@
 import React from "react";
-import Logo from "../../../images/Logo.png";
+import Layangan from "../../../images/layangan.png";
 import Awan from "../../../images/Awan 1 1.png";
 
 import "./AboutUsSection.scss";
 
 const aboutUs =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper libero in massa accumsan auctor. Aenean tempor dictum dui, aliquam pharetra quam ullamcorper eu. Vivamus elementum turpis rhoncus magna ultrices lobortis in gravida augue. Integer sagittis, lorem varius laoreet ullamcorper, turpis eros aliquam dolor, ";
+  "Aku Masuk ITB (AMI) merupakan salah satu program dibawah Kementrian Koordinator Pengembangan Sosial Kemasyarakatan KM ITB yang bergerak untuk membawa semarak melanjutkan pendidikan tinggi dan menyebarkan informasi mengenai dunia perkuliahan kepada siswa/siswi SMA/sederajat. Program tersebut diharapkan dapat meningkatkan angka partisipasi siswa yang melanjutkan pendidikan ke perguruan tinggi.";
 
 export const AboutUsSection = () => {
   return (
     <div className="AboutUsSection-wrapper">
       <img src={Awan} className="AboutUsSection-awan" alt="awan" />
       <div className="AboutUsSection-container">
-        <img src={Logo} className="AboutUsSection-logo" alt="logo AMI" />
+        <img
+          src={Layangan}
+          className="AboutUsSection-layangan"
+          alt="layangan AMI"
+        />
         <div className="AboutUsSection-text">
           <h1>TENTANG KAMI</h1>
           <p>{aboutUs}</p>

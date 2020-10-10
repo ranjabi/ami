@@ -12,13 +12,18 @@ import Awan from "../../../images/Awan 1 2.png";
 import "./Homepage.scss";
 
 const VisiTitle = "Visi";
-const VisiDescription =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper libero in massa accumsan auctor. Aenean tempor dictum dui, aliquam pharetra quam ullamcorper eu. Vivamus elementum turpis rhoncus magna ultrices lobortis in gravida augue. Integer sagittis, lorem varius laoreet ullamcorper, turpis eros aliquam dolor, ";
+const VisiDescription = [
+  "Aku Masuk ITB sebagai wadah untuk eksplorasi potensi diri dan peluang, membangun rasa empati demi mewujudkan visi yang sama yaitu menyadarkan kaum terpelajar akan pentingnya pendidikan tinggi untuk kesejahteraan masing-masing individu dalam memajukan Indonesia.",
+];
 const VisiImage = HelmLakiLaki;
 
 const MisiTitle = "Misi";
-const MisiDescription =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper libero in massa accumsan auctor. Aenean tempor dictum dui, aliquam pharetra quam ullamcorper eu. Vivamus elementum turpis rhoncus magna ultrices lobortis in gravida augue. Integer sagittis, lorem varius laoreet ullamcorper, turpis eros aliquam dolor, ";
+const MisiDescription = [
+  `Mengupayakan perluasan penyebaran informasi terkait perguruan tinggi dan pentingnya pendidikan kepada siswa/i SMA/sederajat di Indonesia.`,
+  `Menanamkan akan semangat kesatuan, gotong royong dan cinta tanah air terhadap semua elemen yang terlibat dalam AMI 2021.`,
+  `Mewujudkan kesadaran akan peran mahasiswa sebagai insan terdidik yang berkewajiban membagikan ilmunya dan perannya sebagai bagian dari perguruan tinggi untuk melakukan pengabdian masyarakat.`,
+  `Anggota dapat mengeksplorasi potensi diri dan peluang yang ada di tengah kondisi pandemi.`,
+];
 const MisiImage = HelmWanita;
 
 export const Homepage = () => {

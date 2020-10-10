@@ -13,7 +13,7 @@
 }
 
 .footer-icons {
-  height: clamp(40px, 7.2vw, 64px);
+  height: clamp(40px, 5vw, 48px);
   margin: 10px 0;
   width: 50%;
   display: flex;
@@ -29,12 +29,12 @@
     svg {
       height: 100%;
       width: 100%;
-      color: $f_purple;
+      color: $f_mainColor;
     }
     &:hover {
       transform: translateY(-2.5px);
       svg {
-        color: $f_purple2;
+        color: $f_mainColor2;
       }
     }
   }

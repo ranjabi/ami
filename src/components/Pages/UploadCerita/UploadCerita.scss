@@ -6,12 +6,6 @@
   justify-content: center;
   align-items: center;
   padding: 50px 0;
-  .UploadCerita-teratai-image {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
   .UploadCerita-containter {
     width: 100%;
     max-width: 1000px;
@@ -50,10 +44,9 @@
 }
 @media (max-width: 480px) {
   .UploadCerita-wrapper {
-    padding: 100px 0;
-    .UploadCerita-teratai-image {
-      display: block;
-      width: 20%;
+    padding: 5vh 0;
+    h1 {
+      margin-bottom: 5vh;
     }
     .UploadCerita-containter {
       padding: 0 40px;
