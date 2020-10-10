@@ -68,7 +68,11 @@ export const UploadCerita = () => {
     ],
     SAPPK: ["ARSITEKTUR", "PERENCANAAN WILAYAH DAN KOTA"],
     SBM: ["MANAJEMEN", "KEWIRAUSAHAAN"],
-    SF: [
+    SF:[
+      "Sains dan Teknologi Farmasi",
+      "Farmasi Klinik dan Komunitas"
+    ],
+    SITH: [
       "BIOLOGI",
       "MIKROBIOLOGI",
       "REKAYASA HAYATI",
