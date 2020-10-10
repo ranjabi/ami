@@ -8,16 +8,22 @@ export const Footer = () => {
     <div className="footer">
       <h1>our social media</h1>
       <div className="footer-icons">
-        <a href="#" className="footer-icon">
+        <a
+          href="https://www.instagram.com/akumasukitb/"
+          className="footer-icon"
+        >
           <FaInstagram />
         </a>
-        <a href="#" className="footer-icon">
-          <FaWhatsapp />
-        </a>
-        <a href="#" className="footer-icon">
+        <a
+          href="https://timeline.line.me/user/_dVwCk_mf49WdkIDDrFEAtbpnSLOGwZuG_8VuoD0?utm_medium=windows&utm_source=desktop&utm_campaign=OA_Profile"
+          className="footer-icon"
+        >
           <RiLineLine />
         </a>
-        <a href="#" className="footer-icon">
+        <a
+          href="https://www.youtube.com/user/AkuMasukITB"
+          className="footer-icon"
+        >
           <RiYoutubeLine />
         </a>
       </div>
