@@ -75,7 +75,7 @@ export const UploadCerita = () => {
               label="Angkatan"
               hasLabel
               value={angkatan}
-              options={[20, 19, 18, 17, 16]}
+              options={[20, 19, 18, 17, 16, 15, 14]}
               handleChange={setAngkatan}
             />
             {daftarJurusan && (
