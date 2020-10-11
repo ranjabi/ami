@@ -11,18 +11,24 @@ export const Footer = () => {
         <a
           href="https://www.instagram.com/akumasukitb/"
           className="footer-icon"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaInstagram />
         </a>
         <a
           href="https://timeline.line.me/user/_dVwCk_mf49WdkIDDrFEAtbpnSLOGwZuG_8VuoD0?utm_medium=windows&utm_source=desktop&utm_campaign=OA_Profile"
           className="footer-icon"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <RiLineLine />
         </a>
         <a
           href="https://www.youtube.com/user/AkuMasukITB"
           className="footer-icon"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <RiYoutubeLine />
         </a>
