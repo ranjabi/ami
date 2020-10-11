@@ -1,14 +1,33 @@
 .Homepage-wrapper {
   position: relative;
+  overflow-x: hidden;
   .Homepage-awan {
     position: absolute;
     right: 0;
     top: 0;
   }
+  .Homepage-awan-bottom {
+    z-index: -1;
+    position: absolute;
+    transform: translateX(-20vw);
+    height: 200px;
+    left: 0;
+    bottom: 39vh;
+  }
+  .Homepage-burung {
+    z-index: -1;
+    position: absolute;
+    height: 200px;
+    right: 0;
+    bottom: 40vh;
+    opacity: 50%;
+  }
 }
 @media (max-width: 480px) {
   .Homepage-wrapper {
-    .Homepage-awan {
+    .Homepage-awan,
+    .Homepage-awan-bottom,
+    .Homepage-burung {
       display: none;
     }
   }

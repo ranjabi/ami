@@ -8,6 +8,8 @@ import { Footer } from "../../footer/Footer.jsx";
 import HelmLakiLaki from "../../../images/Helm laki-laki 1.png";
 import HelmWanita from "../../../images/Helm wanita 1.png";
 import Awan from "../../../images/Awan 1 2.png";
+import AwanBottom from "../../../images/Awan 3.png";
+import Burung from "../../../images/Burung 1.png";
 
 import "./Homepage.scss";
 
@@ -44,6 +46,8 @@ export const Homepage = () => {
         image={MisiImage}
         reverse
       />
+      <img src={AwanBottom} className="Homepage-awan-bottom" alt="awan" />
+      <img src={Burung} className="Homepage-burung" alt="burung" />
       <Footer />
     </div>
   );

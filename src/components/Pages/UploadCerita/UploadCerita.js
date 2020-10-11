@@ -3,7 +3,7 @@ import axios from "axios";
 import { Navbar } from "../../Navbar/Navbar.js";
 import { Footer } from "../../footer/Footer.jsx";
 import { InputField, TextArea, Button, Dropdown } from "../../Form.js";
-import PerisaiImage from "../../../images/Perisai 1.svg";
+import PerisaiImage from "../../../images/perisai.png";
 
 import "./UploadCerita.scss";
 

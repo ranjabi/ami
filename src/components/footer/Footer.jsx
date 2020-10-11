@@ -1,7 +1,6 @@
 import React from "react";
 import "./footer.scss";
-import { FaInstagram } from "react-icons/fa";
-import { RiLineLine, RiYoutubeLine } from "react-icons/ri";
+import { FaInstagramSquare, FaLine, FaYoutubeSquare } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -14,7 +13,7 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaInstagram />
+          <FaInstagramSquare />
         </a>
         <a
           href="https://timeline.line.me/user/_dVwCk_mf49WdkIDDrFEAtbpnSLOGwZuG_8VuoD0?utm_medium=windows&utm_source=desktop&utm_campaign=OA_Profile"
@@ -22,7 +21,7 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <RiLineLine />
+          <FaLine />
         </a>
         <a
           href="https://www.youtube.com/user/AkuMasukITB"
@@ -30,10 +29,11 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <RiYoutubeLine />
+          <FaYoutubeSquare />
         </a>
       </div>
-      <h4>Copyright © AMI 2021</h4>
+      <hr />
+      <h4>Copyright © 2020, Institut Teknologi Bandung, Aku Masuk ITB </h4>
     </div>
   );
 };

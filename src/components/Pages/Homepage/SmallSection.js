@@ -13,13 +13,13 @@ export const SmallSection = ({ title, description, reverse, image }) => {
         <div className="SmallSection-text">
           <h1>{title}</h1>
           {description.length > 1 ? (
-            <p>
-              <ul>
+            <ul>
+              <p>
                 {description.map((desc) => (
                   <li key={desc}>{desc}</li>
                 ))}
-              </ul>
-            </p>
+              </p>
+            </ul>
           ) : (
             <p>{description}</p>
           )}
