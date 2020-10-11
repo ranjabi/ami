@@ -19,7 +19,9 @@ export const UploadCerita = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios.get("http://api.akumasukitb.com/api/fakultas");
+      const result = await axios.get(
+        "https://api.akumasukitb.com/api/fakultas"
+      );
 
       setDaftarJurusan(result.data.data);
     };
@@ -27,15 +29,18 @@ export const UploadCerita = () => {
   }, [daftarJurusan]);
 
   const sendCerita = async () => {
-    const response = await axios.post("http://api.akumasukitb.com/api/cerita", {
-      nama,
-      nim: +nim,
-      angkatan,
-      fakultas,
-      jurusan,
-      line_id,
-      cerita,
-    });
+    const response = await axios.post(
+      "https://api.akumasukitb.com/api/cerita",
+      {
+        nama,
+        nim: +nim,
+        angkatan,
+        fakultas,
+        jurusan,
+        line_id,
+        cerita,
+      }
+    );
     console.log(JSON.stringify(response));
   };
 

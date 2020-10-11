@@ -20,7 +20,7 @@ class App extends React.Component {
           <Route exact path="/" render={(props) => <Homepage {...props} />} />
           <Route
             exact
-            path="/UploadCerita"
+            path="/CeritaInspiratif"
             render={(props) => <UploadCerita {...props} />}
           />
           <Redirect to="/" />
