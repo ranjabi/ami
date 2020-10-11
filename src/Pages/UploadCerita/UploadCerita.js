@@ -1,34 +1,39 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import {Layout} from "../Layout/Layout";
-import { InputField, TextArea, Button, Dropdown } from "../../components/Form/Form";
+import { Layout } from "../Layout/Layout";
+import {
+  InputField,
+  TextArea,
+  Button,
+  Dropdown,
+} from "../../components/Form/Form";
 import PerisaiImage from "../../images/perisai.png";
-import {Redirect} from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 import "./UploadCerita.scss";
 
 export const UploadCerita = () => {
   const [nama, setNama] = useState("");
   const [nim, setNim] = useState("");
-  const [angkatan, setAngkatan] = useState(20);
+  const [angkatan, setAngkatan] = useState("");
   const [fakultas, setFakultas] = useState("");
   const [jurusan, setJurusan] = useState("");
   const [line_id, setLineID] = useState("");
   const [cerita, setCerita] = useState("");
   const [daftarJurusan, setDaftarJurusan] = useState({});
 
-  const errNamaText = "Namanya minimal 5 karakter bang!";
-  const errNIMText = "Coba di cek lagi NIMnya bang!";
-  const errFakultasText = "Fakultas Tidak Boleh Kosong!"
-  const errCeritaText = "Ceritanya minimal 100 karakter bang!";
-  const errLineText = "ID Line tidak boleh kosong!";
+  const errNamaText = "Namanya minimal 5 karakter ya";
+  const errNIMText = "Coba di cek lagi NIMnya yuk!";
+  const errFakultasText = "Fakultas tidak boleh kosong";
+  const errLineText = "ID Line tidak boleh kosong";
+  const ceritaPlaceholder = "minimal 100 karakter";
 
-  const [errNama, setErrNama] = useState(errNamaText);
-  const [errNim, setErrNim] = useState(errNIMText);
+  const [errNama, setErrNama] = useState("");
+  const [errNim, setErrNim] = useState("");
   const [errAngkatan, setErrAngkatan] = useState("");
-  const [errFakultas, setErrFakultas] = useState(errFakultasText);
-  const [errCerita, setErrCerita] = useState(errCeritaText);
-  const [errIDLine, setErrIDLine] = useState(errLineText);
+  const [errFakultas, setErrFakultas] = useState("");
+  const [ceritaCounter, setCeritaCounter] = useState(0);
+  const [errIDLine, setErrIDLine] = useState("");
 
   const [redirect, setRedirect] = useState(false);
 
@@ -44,9 +49,16 @@ export const UploadCerita = () => {
   }, [daftarJurusan]);
 
   const sendCerita = async () => {
-    if(errNama || errNim || errAngkatan || errCerita || errIDLine || fakultas===""){
-      window.alert("Formnya belom beres bang!");
-    }else{
+    if (
+      errNama ||
+      errNim ||
+      errAngkatan ||
+      ceritaCounter < 100 ||
+      errIDLine ||
+      fakultas === ""
+    ) {
+      window.alert("Form belum lengkap");
+    } else {
       const response = await axios.post(
         "https://api.akumasukitb.com/api/cerita",
         {
@@ -59,10 +71,10 @@ export const UploadCerita = () => {
           cerita,
         }
       );
-      if(response.data.status==='success'){
+      if (response.data.status === "success") {
         setRedirect(true);
-      }else{
-        window.alert("Sorry, something went wrong :(");
+      } else {
+        window.alert("Maaf, ada kesalahan dari server kami :(");
       }
       console.log(JSON.stringify(response));
     }
@@ -71,65 +83,64 @@ export const UploadCerita = () => {
   const changeFakultas = (value) => {
     setFakultas(value);
     setJurusan("TPB");
-    if(value){
+    if (value) {
       setErrFakultas("");
-    }else{
-      setErrFakultas(errFakultasText)
+    } else {
+      setErrFakultas(errFakultasText);
     }
-  }
+  };
 
   const changeName = (value) => {
     setNama(value);
-    if(value.length<5){
+    if (value.length < 5) {
       setErrNama(errNamaText);
-    }else{
+    } else {
       setErrNama("");
     }
-  }
+  };
 
   const changeCerita = (value) => {
     setCerita(value);
-    if(value.length<100){
-      setErrCerita(errCeritaText);
-    }else{
-      setErrCerita("");
-    }
-  }
+    setCeritaCounter(value.length);
+  };
 
   const changeIDLine = (value) => {
     setLineID(value);
-    if(value.length===0){
+    if (value.length === 0) {
       setErrIDLine(errLineText);
-    }else{
+    } else {
       setErrIDLine("");
     }
-  }
+  };
 
-  const checkNim = useCallback((nim) => {
-    let nimRegex = /(?<fakultas>\d{3})(?<tahun>\d{2})(?<digit>\d{3})/;
-    if(!nimRegex.test(nim)){
-      setErrNim(errNIMText);
-    }else{
-      let testRes = nimRegex.exec(nim);
-      setErrAngkatan("");
-      if(testRes.groups.tahun!==angkatan){
-        setErrNim("Yakin itu ga salah nulis tahun?");
-        setErrAngkatan("Yakin itu ga salah pilih tahun?");
-      }else if(testRes.groups.digit==="000"){
-        setErrNim("Hayo, emang ada absen 000 ya?");
-      }else{
-        setErrNim("");
+  const checkNim = useCallback(
+    (nim) => {
+      let nimRegex = /(?<fakultas>\d{3})(?<tahun>\d{2})(?<digit>\d{3})/;
+      if (!nimRegex.test(nim)) {
+        nim && setErrNim(errNIMText);
+      } else {
+        let testRes = nimRegex.exec(nim);
+        setErrAngkatan("");
+        if (testRes.groups.tahun !== angkatan) {
+          setErrNim("Tahun harus sama");
+          setErrAngkatan("Tahun harus sama");
+        } else if (testRes.groups.digit === "000") {
+          setErrNim("Hayo, emang ada absen 000 ya? :)");
+        } else {
+          setErrNim("");
+        }
       }
-    }
-  },[angkatan])
+    },
+    [angkatan]
+  );
 
-  useEffect(()=>{
+  useEffect(() => {
     checkNim(nim);
-  },[nim,angkatan, checkNim]) 
+  }, [nim, angkatan, checkNim]);
 
   return (
     <Layout>
-      {redirect && <Redirect to="/"/>}
+      {redirect && <Redirect to="/" />}
       <div className="UploadCerita-wrapper">
         <div className="UploadCerita-containter">
           <div className="UploadCerita-badge">
@@ -198,11 +209,12 @@ export const UploadCerita = () => {
             />
             <TextArea
               label="Ceritamu"
+              placeholder={ceritaPlaceholder}
               hasLabel
               inputType="text"
               value={cerita}
               handleChange={changeCerita}
-              error={errCerita}
+              error={`${ceritaCounter}/100`}
             />
             <Button text="Send Your Story" onClick={sendCerita} />
           </div>

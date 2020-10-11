@@ -21,6 +21,7 @@ const TextArea = (props) => (
       name={props.name}
       value={props.value}
       onChange={(e) => props.handleChange(e.target.value)}
+      placeholder={props.placeholder}
       rows={4}
     />
     {props.error && <p className="error">{props.error}</p>}
@@ -46,7 +47,9 @@ const Dropdown = (props) => (
       onChange={(e) => e.target.value && props.handleChange(e.target.value)}
       value={props.value}
     >
-      <option disabled />
+      <option value="" disabled>
+        Pilih 1
+      </option>
       {props.options.map((row) => (
         <option key={row}>{row}</option>
       ))}
