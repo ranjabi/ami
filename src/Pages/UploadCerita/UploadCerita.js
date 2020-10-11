@@ -214,7 +214,7 @@ export const UploadCerita = () => {
               inputType="text"
               value={cerita}
               handleChange={changeCerita}
-              error={`${ceritaCounter}/100`}
+              error={`${ceritaCounter} karakter`}
             />
             <Button text="Send Your Story" onClick={sendCerita} />
           </div>
