@@ -41,9 +41,10 @@ const Dropdown = (props) => (
     {props.hasLabel && <label>{props.label}</label>}
     <select
       name={props.name}
-      onChange={(e) => props.handleChange(e.target.value)}
+      onChange={(e) => e.target.value && props.handleChange(e.target.value)}
       value={props.value}
     >
+      <option disabled />
       {props.options.map((row) => (
         <option key={row}>{row}</option>
       ))}

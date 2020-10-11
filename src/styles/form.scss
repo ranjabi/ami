@@ -32,6 +32,7 @@
     justify-self: flex-start;
   }
   input[type="text"],
+  input[type="number"],
   select {
     @include setup_font(18px, 600, LailaMedium);
     @include default_transition(0.3s);

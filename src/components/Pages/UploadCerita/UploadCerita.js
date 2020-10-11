@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Navbar } from "../../Navbar/Navbar.js";
 import { Footer } from "../../footer/Footer.jsx";
@@ -9,89 +9,35 @@ import "./UploadCerita.scss";
 
 export const UploadCerita = () => {
   const [nama, setNama] = useState("");
-  const [fakultas, setFakultas] = useState("STEI");
-  const [jurusan, setJurusan] = useState("TEKNIK ELEKTRO");
-  const [email, setEmail] = useState("");
+  const [nim, setNim] = useState("");
+  const [angkatan, setAngkatan] = useState(20);
+  const [fakultas, setFakultas] = useState("");
+  const [jurusan, setJurusan] = useState("");
+  const [line_id, setLineID] = useState("");
   const [cerita, setCerita] = useState("");
+  const [daftarJurusan, setDaftarJurusan] = useState({});
 
-  const daftar_fakultas = [
-    "FITB",
-    "FMIPA",
-    "FSRD",
-    "FTI",
-    "FTMD",
-    "FTTM",
-    "FTSL",
-    "SAPPK",
-    "SBM",
-    "SF",
-    "SITH",
-    "STEI",
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get("http://api.akumasukitb.com/api/fakultas");
 
-  const daftar_jurusan = {
-    FITB: [
-      "TEKNIK GEOLOGI",
-      "TEKNIK GEODESI DAN GEOMATIKA",
-      "METEOROLOGI",
-      "OSEANOGRAFI",
-    ],
-    FMIPA: ["MATEMATIKA", "FISIKA", "ASTRONOMI", "KIMIA", "AKTUARIA"],
-    FSRD: [
-      "SENI RUPA",
-      "KRIA",
-      "DESAIN INTERIOR",
-      "DESAIN KOMUNIKASI VISUAL",
-      "DESAIN PRODUK",
-    ],
-    FTI: [
-      "TEKNIK KIMIA",
-      "TEKNIK FISIKA",
-      "TEKNIK INDUSTRI",
-      "MANAJEMEN REKAYASA INDUSTRI",
-      "TEKNIK PANGAN",
-      "TEKNIK BIOENERGI DAN KEMURDI",
-    ],
-    FTMD: ["TEKNIK MESIN", "TEKNIK DIRGANTARA", "TEKNIK MATERIAL"],
-    FTTM: [
-      "TEKNIK PERTAMBANGAN",
-      "TEKNIK PERRMINYAKAN",
-      "TEKNIK GEOFISIKA",
-      "TEKNIK METALURGI",
-    ],
-    FTSL: [
-      "TEKNIK SIPIL",
-      "TEKNIK LINGKUNGAN",
-      "TEKNIK KELAUTAN",
-      "TEKNIK DAN PENGELOLAAN SUMBER DAYA AIR",
-      "REKAYASA INFRASTRUKTUR LINGKUNGAN",
-    ],
-    SAPPK: ["ARSITEKTUR", "PERENCANAAN WILAYAH DAN KOTA"],
-    SBM: ["MANAJEMEN", "KEWIRAUSAHAAN"],
-    SF: ["Sains dan Teknologi Farmasi", "Farmasi Klinik dan Komunitas"],
-    SITH: [
-      "BIOLOGI",
-      "MIKROBIOLOGI",
-      "REKAYASA HAYATI",
-      "REKAYASA PERTANIAN",
-      "REKAYASA KEHUTANAN",
-      "TEKNOLOGI PASCA PANEN",
-    ],
-    STEI: [
-      "TEKNIK ELEKTRO",
-      "TEKNIK INFORMATIKA",
-      "TEKNIK TENAGA LISTRIK",
-      "TEKNIK TELEKOMUNIKASI",
-      "SISTEM DAN TEKNOLOGI INFORMASI",
-      "TEKNIK BIOMEDIS",
-    ],
+      setDaftarJurusan(result.data.data);
+    };
+    fetchData();
+  }, [daftarJurusan]);
+
+  const sendCerita = async () => {
+    const response = await axios.post("http://api.akumasukitb.com/api/cerita", {
+      nama,
+      nim: +nim,
+      angkatan,
+      fakultas,
+      jurusan,
+      line_id,
+      cerita,
+    });
+    console.log(JSON.stringify(response));
   };
-
-  // const daftar_jurusan = async () => {
-  //   const data = await axios.get("http://api.akumasukitb.com/api/fakultas");
-  //   console.log(data);
-  // };
-  // daftar_jurusan();
 
   return (
     <div>
@@ -118,28 +64,44 @@ export const UploadCerita = () => {
               value={nama}
               handleChange={setNama}
             />
-            <Dropdown
-              label="Fakultas"
+            <InputField
+              label="NIM"
               hasLabel
-              value={fakultas}
-              options={daftar_fakultas}
-              handleChange={setFakultas}
+              inputType="number"
+              value={nim}
+              handleChange={setNim}
             />
-            {fakultas !== "" && (
+            <Dropdown
+              label="Angkatan"
+              hasLabel
+              value={angkatan}
+              options={[20, 19, 18, 17, 16]}
+              handleChange={setAngkatan}
+            />
+            {daftarJurusan && (
+              <Dropdown
+                label="Fakultas"
+                hasLabel
+                value={fakultas}
+                options={Object.keys(daftarJurusan)}
+                handleChange={setFakultas}
+              />
+            )}
+            {daftarJurusan && fakultas && (
               <Dropdown
                 label="Jurusan"
                 hasLabel
                 value={jurusan}
-                options={daftar_jurusan[fakultas]}
+                options={daftarJurusan[fakultas]}
                 handleChange={setJurusan}
               />
             )}
             <InputField
-              label="Email"
+              label="ID Line"
               hasLabel
               inputType="text"
-              value={email}
-              handleChange={setEmail}
+              value={line_id}
+              handleChange={setLineID}
             />
             <TextArea
               label="Ceritamu"
@@ -148,7 +110,7 @@ export const UploadCerita = () => {
               value={cerita}
               handleChange={setCerita}
             />
-            <Button text="Send Your Story" />
+            <Button text="Send Your Story" onClick={sendCerita} />
           </div>
         </div>
       </div>
