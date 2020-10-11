@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../../images/logo_new.png";
-import Tebing from "../../../images/Group 1.png";
-import { Button } from "../../Form.js";
+import Logo from "../../images/logo_new.png";
+import Tebing from "../../images/Group 1.png";
+import { Button } from "../../components/Form/Form";
 
 import "./MainSection.scss";
 

@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./mixin";
+@import "../../styles/variables";
+@import "../../styles/mixin";
 
 .form {
   @include setup_size(50vw, 50vh);
@@ -18,17 +18,16 @@
 
 .inputField {
   @include setup_size(100%, auto);
-  padding: 10px 0;
   min-height: 50px;
   @include flex_center(column);
-  margin-top: 10px;
+  margin-top: 15px;
   & > * {
     width: 100%;
   }
   label {
     @include setup_font(16px, 400, LailaMedium);
     flex: 1;
-    color: $f_mainColor;
+    color: $f_mainColor2;
     justify-self: flex-start;
   }
   input[type="text"],
@@ -63,6 +62,13 @@
       border: 1.5px solid $a_lightPurple;
       font-size: 16px;
     }
+  }
+  .error {
+    @include setup_font(clamp(8px, 10px, 12px), 600, LailaBold);
+    @include setup_size(100%, auto);
+    color: $f_mainColor2;
+    margin: 2px 0;
+    text-align: right;
   }
 }
 

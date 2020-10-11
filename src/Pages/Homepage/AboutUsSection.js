@@ -1,6 +1,6 @@
 import React from "react";
-import Layangan from "../../../images/layangan.png";
-import Awan from "../../../images/Awan 1 1.png";
+import Layangan from "../../images/layangan.png";
+import Awan from "../../images/Awan 1 1.png";
 
 import "./AboutUsSection.scss";
 

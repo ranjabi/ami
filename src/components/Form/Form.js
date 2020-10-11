@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/form.scss";
+import "./form.scss";
 
 const InputField = (props) => (
   <div className="inputField">
@@ -10,6 +10,7 @@ const InputField = (props) => (
       onChange={(e) => props.handleChange(e.target.value)}
       value={props.value}
     ></input>
+    {props.error && <p className="error">{props.error}</p>}
   </div>
 );
 
@@ -22,6 +23,7 @@ const TextArea = (props) => (
       onChange={(e) => props.handleChange(e.target.value)}
       rows={4}
     />
+    {props.error && <p className="error">{props.error}</p>}
   </div>
 );
 

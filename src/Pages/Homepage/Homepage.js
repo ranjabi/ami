@@ -1,15 +1,14 @@
 import React from "react";
-import { Navbar } from "../../Navbar/Navbar.js";
 import { MainSection } from "./MainSection.js";
 import { AboutUsSection } from "./AboutUsSection.js";
 import { SmallSection } from "./SmallSection.js";
-import { Footer } from "../../footer/Footer.jsx";
+import {Layout} from "../Layout/Layout";
 
-import HelmLakiLaki from "../../../images/Helm laki-laki 1.png";
-import HelmWanita from "../../../images/Helm wanita 1.png";
-import Awan from "../../../images/Awan 1 2.png";
-import AwanBottom from "../../../images/Awan 3.png";
-import Burung from "../../../images/Burung 1.png";
+import HelmLakiLaki from "../../images/Helm laki-laki 1.png";
+import HelmWanita from "../../images/Helm wanita 1.png";
+import Awan from "../../images/Awan 1 2.png";
+import AwanBottom from "../../images/Awan 3.png";
+import Burung from "../../images/Burung 1.png";
 
 import "./Homepage.scss";
 
@@ -32,23 +31,23 @@ export const Homepage = () => {
   return (
     <div className="Homepage-wrapper">
       <img src={Awan} className="Homepage-awan" alt="awan" />
-      <Navbar />
-      <MainSection />
-      <AboutUsSection />
-      <SmallSection
-        title={VisiTitle}
-        description={VisiDescription}
-        image={VisiImage}
-      />
-      <SmallSection
-        title={MisiTitle}
-        description={MisiDescription}
-        image={MisiImage}
-        reverse
-      />
-      <img src={AwanBottom} className="Homepage-awan-bottom" alt="awan" />
-      <img src={Burung} className="Homepage-burung" alt="burung" />
-      <Footer />
+      <Layout>
+        <MainSection />
+        <AboutUsSection />
+        <SmallSection
+          title={VisiTitle}
+          description={VisiDescription}
+          image={VisiImage}
+        />
+        <SmallSection
+          title={MisiTitle}
+          description={MisiDescription}
+          image={MisiImage}
+          reverse
+        />
+        <img src={AwanBottom} className="Homepage-awan-bottom" alt="awan" />
+        <img src={Burung} className="Homepage-burung" alt="burung" />
+      </Layout>
     </div>
   );
 };
