@@ -59,21 +59,21 @@ export const UploadCerita = () => {
     ) {
       window.alert("Form belum lengkap");
     } else {
-      const response = await axios.post(
-        "https://api.akumasukitb.com/api/cerita",
-        {
-          nama,
-          nim: +nim,
-          angkatan,
-          fakultas,
-          jurusan,
-          line_id,
-          cerita,
-        }
-      );
-      if (response.data.status === "success") {
+      try {
+        const response = await axios.post(
+          "https://api.akumasukitb.com/api/cerita",
+          {
+            nama,
+            nim: +nim,
+            angkatan,
+            fakultas,
+            jurusan,
+            line_id,
+            cerita,
+          }
+        );
         setRedirect(true);
-      } else {
+      } catch (err) {
         window.alert("Maaf, ada kesalahan dari server kami :(");
       }
       console.log(JSON.stringify(response));
