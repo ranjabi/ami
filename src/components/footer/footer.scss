@@ -19,6 +19,7 @@
     color: $f_black;
     font-weight: 400;
     font-size: 90%;
+    text-align: center;
   }
 }
 
@@ -45,7 +46,7 @@
     &:hover {
       transform: translateY(-2.5px);
       svg {
-        color: $f_mainColor;
+        color: $f_mainColor2;
       }
     }
   }
