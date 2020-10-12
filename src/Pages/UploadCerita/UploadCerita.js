@@ -64,21 +64,24 @@ export const UploadCerita = () => {
     ) {
       window.alert("Form belum lengkap");
     } else {
-      const response = await axios.post(
-        "https://api.akumasukitb.com/api/cerita",
-        {
-          nama,
-          nim: +nim,
-          angkatan,
-          fakultas,
-          jurusan,
-          line_id,
-          cerita,
+      try {
+        const response = await axios.post(
+          "https://api.akumasukitb.com/api/cerita",
+          {
+            nama,
+            nim: +nim,
+            angkatan,
+            fakultas,
+            jurusan,
+            line_id,
+            cerita,
+          }
+        );
+        if(response.data.status === "success") {
+            setOpen(true);
         }
-      );
-      if (response.data.status === "success") {
-        setOpen(true);
-      } else {
+
+      } catch (err){
         window.alert("Maaf, ada kesalahan dari server kami :(");
       }
     }
