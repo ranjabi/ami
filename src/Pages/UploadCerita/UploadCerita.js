@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback} from "react";
 import axios from "axios";
 import { Layout } from "../Layout/Layout";
+import {Modal} from "../../components/Modal/Modal.js"
 import {
   InputField,
   TextArea,
@@ -8,11 +9,13 @@ import {
   Dropdown,
 } from "../../components/Form/Form";
 import PerisaiImage from "../../images/perisai.png";
-import { Redirect } from "react-router-dom";
+
+import { useHistory } from "react-router-dom";
 
 import "./UploadCerita.scss";
 
 export const UploadCerita = () => {
+  let history = useHistory();
   const [nama, setNama] = useState("");
   const [nim, setNim] = useState("");
   const [angkatan, setAngkatan] = useState("");
@@ -35,7 +38,9 @@ export const UploadCerita = () => {
   const [ceritaCounter, setCeritaCounter] = useState(0);
   const [errIDLine, setErrIDLine] = useState("");
 
-  const [redirect, setRedirect] = useState(false);
+
+
+  const [open,setOpen] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -72,7 +77,7 @@ export const UploadCerita = () => {
         }
       );
       if (response.data.status === "success") {
-        setRedirect(true);
+        setOpen(true);
       } else {
         window.alert("Maaf, ada kesalahan dari server kami :(");
       }
@@ -138,10 +143,30 @@ export const UploadCerita = () => {
     checkNim(nim);
   }, [nim, angkatan, checkNim]);
 
+  const kembaliKeBeranda = () => {
+
+    history.push("/");
+  }
+
   return (
     <Layout>
-      {redirect && <Redirect to="/" />}
+      <Modal open={open}>
+        <h4>Terimakasih atas kontribusimu untuk memantik semangat pendidikan tinggi. Teruslah kobarkan
+      api semangatmu untuk kemajuan bangsa. Jika ceritamu terpilih, kami akan menghubungi lebih
+      lanjut.
+        </h4>
+        <Button text="Kembali Ke Beranda" onClick={kembaliKeBeranda} />
+      </Modal>
+
       <div className="UploadCerita-wrapper">
+        <div className="UploadCerita-opening">
+          <p>Kata adalah perwujudan kesatuan perasaan yang dapat menyusun sebuah cerita sebagai
+    pemantik imajinasi, pengarah inspirasi, dan energi. Mari, para​ tonggak masa depan bangsa,
+    berjalanlah bersama AMI 2021 membawa semangat pendidikan tinggi ke seluruh penjuru negeri
+    dengan menuangkan kisahmu dalam kata. Tiap kisah dan sudut pand​ang dalam mencapai
+    perjalanan ini berbeda-beda. Konsekuensi seseorang yang terdidik adalah mendidik. Siapkah
+    kamu, wahai mahasiswa harapan bangsa, untuk memantik semangat berpendidikan tinggi?</p>
+        </div>
         <div className="UploadCerita-containter">
           <div className="UploadCerita-badge">
             <h1>
@@ -156,6 +181,7 @@ export const UploadCerita = () => {
             ></img>
           </div>
           <div className="UploadCerita-form">
+
             <InputField
               label="Nama"
               hasLabel
