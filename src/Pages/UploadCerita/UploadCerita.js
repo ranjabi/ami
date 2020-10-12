@@ -72,11 +72,11 @@ export const UploadCerita = () => {
             cerita,
           }
         );
+        console.log(response);
         setRedirect(true);
       } catch (err) {
         window.alert("Maaf, ada kesalahan dari server kami :(");
       }
-      console.log(JSON.stringify(response));
     }
   };
 
