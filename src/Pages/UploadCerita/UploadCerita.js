@@ -158,14 +158,7 @@ export const UploadCerita = () => {
       </Modal>
 
       <div className="UploadCerita-wrapper">
-        <div className="UploadCerita-opening">
-          <p>Kata adalah perwujudan kesatuan perasaan yang dapat menyusun sebuah cerita sebagai
-    pemantik imajinasi, pengarah inspirasi, dan energi. Mari, para​ tonggak masa depan bangsa,
-    berjalanlah bersama AMI 2021 membawa semangat pendidikan tinggi ke seluruh penjuru negeri
-    dengan menuangkan kisahmu dalam kata. Tiap kisah dan sudut pand​ang dalam mencapai
-    perjalanan ini berbeda-beda. Konsekuensi seseorang yang terdidik adalah mendidik. Siapkah
-    kamu, wahai mahasiswa harapan bangsa, untuk memantik semangat berpendidikan tinggi?</p>
-        </div>
+
         <div className="UploadCerita-containter">
           <div className="UploadCerita-badge">
             <h1>
@@ -180,7 +173,18 @@ export const UploadCerita = () => {
             ></img>
           </div>
           <div className="UploadCerita-form">
-
+            <div className="UploadCerita-opening">
+              <p>Kata adalah perwujudan kesatuan perasaan yang dapat menyusun sebuah cerita sebagai
+        pemantik imajinasi, pengarah inspirasi, dan energi. Mari, para​ tonggak masa depan bangsa,
+        berjalanlah bersama AMI 2021 membawa semangat pendidikan tinggi ke seluruh penjuru negeri
+        dengan menuangkan kisahmu dalam kata. Tiap kisah dan sudut pand​ang dalam mencapai
+        perjalanan ini berbeda-beda. Konsekuensi seseorang yang terdidik adalah mendidik. </p>
+              <br></br>
+              <p>
+                Siapkah
+                kamu, wahai mahasiswa harapan bangsa, untuk memantik semangat berpendidikan tinggi?
+              </p>
+            </div>
             <InputField
               label="Nama"
               hasLabel
