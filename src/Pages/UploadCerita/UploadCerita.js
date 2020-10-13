@@ -240,7 +240,7 @@ export const UploadCerita = () => {
               error={errIDLine}
             />
             <TextArea
-              label="Ceritamu"
+              label="Kisah perjuanganmu menjadi mahasiswa ITB"
               placeholder={ceritaPlaceholder}
               hasLabel
               inputType="text"
