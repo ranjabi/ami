@@ -27,12 +27,16 @@ body {
   background-size: cover;
 }
 
-h1 {
+h1,
+h2 {
   font-family: Kopriva;
   font-weight: normal;
-  font-size: 60px;
   color: $f_mainColor2;
   text-transform: uppercase;
+}
+
+h1 {
+  font-size: 60px;
   font-size: clamp(28px, 7.2vw, 72px);
 }
 

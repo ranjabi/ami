@@ -6,27 +6,27 @@
   height: 100vh;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
-  background-color: rgba(0,0,0,0.0);
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0);
   visibility: none;
   display: flex;
   align-items: center;
   justify-content: center;
   &.open {
-    background-color: rgba(0,0,0,0.2);
-    z-index : 999;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 999;
 
     .Modal-container {
-      width: 90%;
-      height: 75%;
-      border : 5px solid $f_mainColor;
+      width: 70%;
+      height: 80%;
+      border: 5px solid $f_mainColor;
       background-color: white;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
-      padding : 15px;
+      padding: 25px;
       text-align: center;
       overflow-y: scroll;
       -ms-overflow-style: none;
@@ -35,12 +35,24 @@
         display: none;
       }
       button {
-          width: 35%;
-          height: 60px;
-          font-size: clamp(28px,2.1vw,35px);
+        width: 55%;
+        height: 60px;
+        font-size: clamp(20px, 2.1vw, 35px);
+        &:hover {
+          font-size: clamp(22px, 2.2vw, 37px);
+        }
+      }
+      h2 {
+        font-size: clamp(20px, 4vw, 48px);
       }
       h4 {
-        font-size: clamp(20px,2.4vw,45px);
+        font-size: clamp(16px, 1.8vw, 30px);
+      }
+      hr {
+        width: 90%;
+        height: 2px;
+        background-color: $a_lightPurple;
+        margin: 15px 0;
       }
     }
   }
@@ -49,14 +61,14 @@
     width: 0;
     height: 0;
     transition: 0.25s ease all;
-    border : none;
+    border: none;
     overflow: hidden;
   }
 }
 @media (max-width: 480px) {
   .Modal-wrapper {
     &.open {
-      .Modal-container{
+      .Modal-container {
         button {
           font-size: 15px;
         }

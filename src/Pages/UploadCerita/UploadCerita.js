@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback} from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { Layout } from "../Layout/Layout";
-import {Modal} from "../../components/Modal/Modal.js"
+import { Modal } from "../../components/Modal/Modal.js";
 import {
   InputField,
   TextArea,
@@ -9,10 +9,9 @@ import {
   Dropdown,
 } from "../../components/Form/Form";
 import PerisaiImage from "../../images/perisai.png";
-
 import { useHistory } from "react-router-dom";
-
 import "./UploadCerita.scss";
+import { UploadCeritaClosed } from "./UploadCeritaClosed";
 
 export const UploadCerita = () => {
   let history = useHistory();
@@ -38,9 +37,8 @@ export const UploadCerita = () => {
   const [ceritaCounter, setCeritaCounter] = useState(0);
   const [errIDLine, setErrIDLine] = useState("");
 
-
-
-  const [open,setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const shouldFormClose = new Date() >= new Date("2020-10-30T00:00:00+07:00");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -64,26 +62,31 @@ export const UploadCerita = () => {
     ) {
       window.alert("Form belum lengkap");
     } else {
-      try {
-        const response = await axios.post(
-          "https://api.akumasukitb.com/api/cerita",
-          {
-            nama,
-            nim: +nim,
-            angkatan,
-            fakultas,
-            jurusan,
-            line_id,
-            cerita,
-          }
-        );
-        if(response.data.status === "success") {
+      console.log(shouldFormClose);
+      if (!shouldFormClose) {
+        try {
+          const response = await axios.post(
+            "https://api.akumasukitb.com/api/cerita",
+            {
+              nama,
+              nim: +nim,
+              angkatan,
+              fakultas,
+              jurusan,
+              line_id,
+              cerita,
+            }
+          );
+          if (response.data.status === "success") {
             setOpen(true);
+          }
+          setOpen(true);
+        } catch (err) {
+          window.alert("Maaf, ada kesalahan dari server kami :(");
         }
-
-      } catch (err){
-        window.alert("Maaf, ada kesalahan dari server kami :(");
+        return;
       }
+      window.alert("Maaf, ada kesalahan dari server kami :(");
     }
   };
 
@@ -146,22 +149,24 @@ export const UploadCerita = () => {
   }, [nim, angkatan, checkNim]);
 
   const kembaliKeBeranda = () => {
-
     history.push("/");
-  }
+  };
 
   return (
     <Layout>
+      <Modal open={shouldFormClose}>
+        <UploadCeritaClosed kembaliKeBeranda={kembaliKeBeranda} />
+      </Modal>
       <Modal open={open}>
-        <h4>Terimakasih atas kontribusimu untuk memantik semangat pendidikan tinggi. Teruslah kobarkan
-      api semangatmu untuk kemajuan bangsa. Jika ceritamu terpilih, kami akan menghubungi lebih
-      lanjut.
+        <h4>
+          Terimakasih atas kontribusimu untuk memantik semangat pendidikan
+          tinggi. Teruslah kobarkan api semangatmu untuk kemajuan bangsa. Jika
+          ceritamu terpilih, kami akan menghubungi lebih lanjut.
         </h4>
         <Button text="Kembali Ke Beranda" onClick={kembaliKeBeranda} />
       </Modal>
 
       <div className="UploadCerita-wrapper">
-
         <div className="UploadCerita-containter">
           <div className="UploadCerita-badge">
             <h1>
@@ -177,15 +182,19 @@ export const UploadCerita = () => {
           </div>
           <div className="UploadCerita-form">
             <div className="UploadCerita-opening">
-              <p>Kata adalah perwujudan kesatuan perasaan yang dapat menyusun sebuah cerita sebagai
-        pemantik imajinasi, pengarah inspirasi, dan energi. Mari, para​ tonggak masa depan bangsa,
-        berjalanlah bersama AMI 2021 membawa semangat pendidikan tinggi ke seluruh penjuru negeri
-        dengan menuangkan kisahmu dalam kata. Tiap kisah dan sudut pand​ang dalam mencapai
-        perjalanan ini berbeda-beda. Konsekuensi seseorang yang terdidik adalah mendidik. </p>
+              <p>
+                Kata adalah perwujudan kesatuan perasaan yang dapat menyusun
+                sebuah cerita sebagai pemantik imajinasi, pengarah inspirasi,
+                dan energi. Mari, para​ tonggak masa depan bangsa, berjalanlah
+                bersama AMI 2021 membawa semangat pendidikan tinggi ke seluruh
+                penjuru negeri dengan menuangkan kisahmu dalam kata. Tiap kisah
+                dan sudut pand​ang dalam mencapai perjalanan ini berbeda-beda.
+                Konsekuensi seseorang yang terdidik adalah mendidik.{" "}
+              </p>
               <br></br>
               <p>
-                Siapkah
-                kamu, wahai mahasiswa harapan bangsa, untuk memantik semangat berpendidikan tinggi?
+                Siapkah kamu, wahai mahasiswa harapan bangsa, untuk memantik
+                semangat berpendidikan tinggi?
               </p>
             </div>
             <InputField
