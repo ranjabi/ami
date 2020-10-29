@@ -1,72 +1,58 @@
 # Web-AMI21
 
 WebDev IT AMI caww
+ini README yang dibuat agak buru-buru dan belom di-test, jadi kalo error coba cek stackoverflow, google, atau tanya di grup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Short Desc
 
-## Available Scripts
+Aku Masuk ITB (AMI) merupakan salah satu program dibawah Kementrian Koordinator Pengembangan Sosial Kemasyarakatan KM ITB yang bergerak untuk membawa semarak melanjutkan pendidikan tinggi dan menyebarkan informasi mengenai dunia perkuliahan kepada siswa/siswi SMA/sederajat. Program tersebut diharapkan dapat meningkatkan angka partisipasi siswa yang melanjutkan pendidikan ke perguruan tinggi.
+Ini adalah github repo untuk bagian frontend, bagian backend ada di [sini](https://github.com/ravielze/ami-2021-be) (Private repo).
 
-In the project directory, you can run:
+## Quick Installation
+- Pastiin udah ada [NodeJS](https://nodejs.org/en/), download yang LTS cukup.
+- Harus udah ada [Git](https://git-scm.com/) juga lah ya
+- clone repo ini 
+```
+git clone https://github.com/Chris-Ivan/Web-AMI21 frontend-ami
+cd frontend-ami
+git remote add origin https://github.com/Chris-Ivan/Web-AMI21 frontend-ami
+npm install
+```
 
-### `npm start`
+## Development Mode
+Buat development, pertama masuk ke branch Development dulu.
+```
+git checkout development
+```
+Kalo masih ga yakin ada di branch mana, bisa coba
+`git status`, di situ bakal keliatan lagi di branch mana.
+Jaga-jaga aja kalo ada yg update codenya di remote, coba
+`git pull origin master`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+buat nyalain servernya di PC masing-masing tinggal
+```npm start```
+(pastiin ga salah folder di terminal).
+Habis itu (biasanya) bakal kebuka [http://localhost:3000](http://localhost:3000) di browser.
+Kalau ada error akibat NPM Dependenciesnya ga lengkap, bisa `npm install` di terminal trus coba lagi.
+kalau mau matiin servernya tinggal Ctrl+C.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Kalo udah selesai ngedit codenya,
+```
+git add .
+git commit -m "tulis di sini apa yang diubah"
+git push origin development
+```
+Hasil pushnya bakal auto nge-update konten di [dev.akumasukitb.com](https://dev.akumasukitb.com/) yang di-host di Netlify, tapi tolong sabar kalo ga langsung ke-update. Kalo udah agak lama (10+ menit) ga ke update, mungkin bisa kabarin di grup.
 
-### `npm test`
+Kalo codenya udah fix dan siap di-merge sama website aslinya:
+```
+git checkout master
+git add .
+git commit -m "tulis pesan"
+git push origin master
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## API
+Sejauh ini, API yang bisa dipake ada di [api.akumasukitb.com](https://api.akumasukitb.com/) dan baru ada 2 (per 23 Nov)
+- GET, POST | [https://api.akumasukitb.com/api/cerita](https://api.akumasukitb.com/api/cerita)
+- GET | [https://api.akumasukitb.com/api/fakultas](https://api.akumasukitb.com/api/fakultas)
