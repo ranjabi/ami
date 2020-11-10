@@ -1,4 +1,6 @@
 @import "../../styles/variables";
+@import "../../styles/mixin";
+
 .MainSection-wrapper {
   overflow-x: hidden;
   width: 100%;
@@ -29,6 +31,7 @@
 
     .MainSection-logo {
       height: 60%;
+      @include set_glow(1);
     }
 
     button {
@@ -38,6 +41,7 @@
     }
   }
   .MainSection-tebing {
+    @include set_glow(0.2);
     position: absolute;
     height: 100%;
     transform: translate(120%, 0%);

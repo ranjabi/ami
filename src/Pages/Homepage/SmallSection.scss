@@ -1,4 +1,6 @@
 @import "../../styles/variables";
+@import "../../styles/mixin";
+
 .SmallSection-wrapper {
   width: 100%;
   display: flex;
@@ -28,6 +30,7 @@
       }
     }
     img {
+      @include set_glow(0.2);
       width: 100%;
       padding: 0 20px;
     }

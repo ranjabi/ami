@@ -76,13 +76,14 @@
   @include setup_size(100%, clamp(50px, 75px, 100px));
   @include setup_font(20px, 800, LailaBold);
   @include default_transition(0.3s);
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.2);
   color: white;
-  background-color: $f_mainColor2;
-  border: none;
+  background-color: transparent;
+  border: 2px solid $f_mainColor;
   border-radius: 8px;
   margin-top: 50px;
   &:hover {
     cursor: pointer;
-    font-size: 22px;
+    transform: scale(1.05);
   }
 }

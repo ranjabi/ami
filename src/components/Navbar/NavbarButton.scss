@@ -5,7 +5,7 @@
     text-align: center;
     color: $f_mainColor2;
     transition: color 0.25s ease;
-    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    font-size: clamp(1rem, 3vw, 1.3rem);
   }
   &:hover h4 {
     color: $f_mainColor;

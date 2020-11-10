@@ -1,33 +1,45 @@
 import React from "react";
-// import { Footer } from "./components/footer/Footer";
-// import { Navbar } from "./components/Navbar/Navbar";
-// import { InputField, Button, TextArea } from "./components/Form";
-import { UploadCerita } from "./Pages/UploadCerita/UploadCerita";
-import { Homepage } from "./Pages/Homepage/Homepage";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
   Redirect,
+  withRouter,
 } from "react-router-dom";
+import AppRoute from "./routes/AppRoute";
+import { routes } from "./routes/routes";
 import "./styles/base.scss";
 
-class App extends React.Component {
+class _ScrollToTop extends React.Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0);
+    }
+  }
+
   render() {
-    return (
-      <Router>
+    return this.props.children;
+  }
+}
+const ScrollToTop = withRouter(_ScrollToTop);
+
+function App() {
+  return (
+    <Router>
+      <ScrollToTop>
         <Switch>
-          <Route exact path="/" render={(props) => <Homepage {...props} />} />
-          <Route
-            exact
-            path="/CeritaInspiratif"
-            render={(props) => <UploadCerita {...props} />}
-          />
+          {routes.map((route) => (
+            <AppRoute
+              exact
+              path={route.path}
+              key={route.path}
+              component={route.component}
+            />
+          ))}
           <Redirect to="/" />
         </Switch>
-      </Router>
-    );
-  }
+      </ScrollToTop>
+    </Router>
+  );
 }
 
 export default App;

@@ -1,0 +1,21 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: rgb(80, 39, 83);
+}
+
+.container {
+  background-image: url("./bg-langit-gelap.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.logo-ami-loading {
+  width: 200px;
+  -webkit-filter: drop-shadow(0px 1px 10px rgba(255, 255, 255, 1));
+  filter: drop-shadow(0px 1px 10px rgba(255, 255, 255, 1));
+}

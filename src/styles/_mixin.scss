@@ -19,3 +19,8 @@
 @mixin default_transition($duration) {
   transition: all $duration ease;
 }
+
+@mixin set_glow($opacity) {
+  -webkit-filter: drop-shadow(0px 1px 10px rgba(255, 255, 255, $opacity));
+  filter: drop-shadow(0px 1px 10px rgba(255, 255, 255, $opacity));
+}

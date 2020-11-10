@@ -2,19 +2,11 @@ import React from "react";
 
 import "./NavbarButton.scss";
 
-export const NavbarButton = ({ text, path, onlyHomepage }) => {
-  const handleClick = (event) => {
-    event.preventDefault();
-    let isWithinThisPage = document.querySelector(path);
-    isWithinThisPage
-      ? isWithinThisPage.scrollIntoView({ behavior: "smooth", block: "start" })
-      : (document.location.href = "/");
-  };
-
+export const NavbarButton = ({ text }) => {
   return (
-    <a className="navbar-button" href={path} onClick={handleClick}>
+    <div className="navbar-button">
       <h4>{text}</h4>
       <span className="line"></span>
-    </a>
+    </div>
   );
 };
