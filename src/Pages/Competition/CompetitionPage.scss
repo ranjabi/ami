@@ -1,0 +1,47 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
+.specific-competition-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  .competitions-container-small {
+    margin-bottom: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5%;
+    .competition-thumbnail-small {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.25s ease-in-out;
+      opacity: 0.7;
+      img {
+        transition: all 0.25s ease-in-out;
+        width: 60%;
+        max-width: 250px;
+      }
+      p {
+        font-family: LailaMedium;
+        color: $a_lightPurple;
+        margin-top: 10px;
+      }
+      &:hover {
+        transform: translateY(-3px);
+        opacity: 1;
+      }
+    }
+    .active-thumbnail {
+      opacity: 1;
+      img {
+        @include set_glow(0.3);
+      }
+      &:hover {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

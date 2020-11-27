@@ -6,6 +6,7 @@ import YukVisualkanImg from "../images/yuk-visualkan.png";
 import CheckTheMissionImg from "../images/check-the-mission.png";
 import KomikKarikaturImg from "../images/komik-karikatur.png";
 import MusikalisasiPuisiImg from "../images/musikalisasi-puisi.png";
+import { CompetitionPage } from "../Pages/Competition/CompetitionPage";
 
 export const routes = [
   {
@@ -32,21 +33,25 @@ export const competitionRoutes = [
   {
     label: "Yuk Visualkan",
     image: YukVisualkanImg,
-    path: "/yuk-visualkan",
+    path: "/lomba/yuk-visualkan",
+    component: CompetitionPage,
   },
   {
     label: "Check the Mission",
     image: CheckTheMissionImg,
-    path: "/check-the-mission",
+    path: "/lomba/check-the-mission",
+    component: CompetitionPage,
   },
   {
     label: "Komik Karikatur",
     image: KomikKarikaturImg,
-    path: "/komik-karikatur",
+    path: "/lomba/komik-karikatur",
+    component: CompetitionPage,
   },
   {
     label: "Musikalisasi Puisi",
     image: MusikalisasiPuisiImg,
-    path: "/musikalisasi-puisi",
+    path: "/lomba/musikalisasi-puisi",
+    component: CompetitionPage,
   },
 ];

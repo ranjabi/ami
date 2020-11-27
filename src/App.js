@@ -6,7 +6,7 @@ import {
   withRouter,
 } from "react-router-dom";
 import AppRoute from "./routes/AppRoute";
-import { routes } from "./routes/routes";
+import { routes, competitionRoutes } from "./routes/routes";
 import "./styles/base.scss";
 
 class _ScrollToTop extends React.Component {
@@ -28,6 +28,14 @@ function App() {
       <ScrollToTop>
         <Switch>
           {routes.map((route) => (
+            <AppRoute
+              exact
+              path={route.path}
+              key={route.path}
+              component={route.component}
+            />
+          ))}
+          {competitionRoutes.map((route) => (
             <AppRoute
               exact
               path={route.path}
