@@ -1,5 +1,30 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
 .mainCompetition-container {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  h1{
+    text-align: center;
+  }
+}
+
+.competitions-container{
+  @include flex_center(row);
+  @include setup_size(100%, 50vh);
+  align-items: flex-start;
+  padding-top : 50px;
+  &>*{
+    flex : 1;
+    padding : 0 15px;
+    img{
+      @include setup_size(100%,100%);
+    }
+    p{
+      text-align: center;
+      @include setup_font(32px, 400, LailaMedium);
+      color : $f_mainColor;
+    }
+  }
 }

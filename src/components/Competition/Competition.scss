@@ -1,0 +1,86 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
+.button-wrapper{
+    @include setup_size(100%, 100%);
+    padding : 0 30%;
+    button{
+        border : 2px solid $f_mainColor2;
+        border-radius : 64px;
+    }
+}
+
+.title,.subtitle{
+    color : $f_mainColor2;
+}
+
+.title, .tema{
+    text-align: center;
+}
+
+.title{
+    @include setup_font(64px, 100, Kopriva);
+    @include setup_size(100%, fit-content);
+    padding-bottom : 20px;
+}
+
+.tema{
+    @include setup_font(32px, 100, LailaMedium);
+    color : $f_mainColor;
+}
+
+.blok-lomba{
+    @include setup_font(16px, lighter, LailaMedium);
+    padding : 20px 0;
+    color : $f_white;
+}
+
+.subtitle{
+    @include setup_font(32px, 100, Kopriva);
+    padding-bottom: 20px;
+}
+
+.content{
+    @include setup_size(100%, fit-content);
+    line-height: 2;
+    ol{
+        padding-left : 20px;
+        ol{
+            list-style-type: lower-alpha;
+        }
+        ul{
+            padding-left : 20px;
+        }
+    }
+}
+
+table,th,td{
+    border : 1px solid $f_white;
+}
+
+table{
+    @include setup_size(100%, fit-content);
+    border-collapse: collapse;
+    tr{
+        td:first-child{
+            text-align : center;
+            padding: 0;
+        }
+    }
+    th{text-align: center;}
+    td{text-align: left;padding : 5px 15px;}
+}
+
+.contact-person{
+    & > *{
+        padding : 5px 0;
+    }
+    .contact-person-row{
+        @include flex_center(row);
+        justify-content: flex-start;
+        svg{
+            transform: scale(1.5);
+            margin-right : 20px;
+        }
+    }
+}
