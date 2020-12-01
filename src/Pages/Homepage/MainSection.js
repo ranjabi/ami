@@ -12,8 +12,8 @@ export const MainSection = () => {
       <div className="MainSection-container">
         <img src={Logo} className="MainSection-logo" alt="main section logo" />
         <p>Aku Masuk ITB 2021</p>
-        <Link to="/organogram" className="linkBuutton">
-          <Button text="Organogram" doNothing />
+        <Link to="/lomba" className="linkBuutton">
+          <Button text="Lomba" doNothing />
         </Link>
       </div>
       <img src={Tebing} className="MainSection-tebing" alt="batu" />
