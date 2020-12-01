@@ -31,7 +31,7 @@ export const routes = [
 
 export const competitionRoutes = [
   {
-    label: "Yuk Visualkan",
+    label: "Yuk Visualkan!",
     image: YukVisualkanImg,
     path: "/lomba/yuk-visualkan",
     component: CompetitionPage,
