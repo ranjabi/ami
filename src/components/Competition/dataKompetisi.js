@@ -462,9 +462,9 @@ const data = [
 		linkPendaftaran: "https://bit.ly/MusPusAMI",
 		ketentuanPeserta: (
 			<ol>
-				<li>Peserta merupakan pelajar SMA atau</li>
+				<li>Peserta merupakan pelajar SMA atau sederajat</li>
 				<li>
-					Lomba ini bersifat Setiap kelompok terdiri dari tiga sampai lima
+					Lomba ini bersifat kelompok. Setiap kelompok terdiri dari tiga sampai lima
 					orang. (asal sekolah setiap anggota tidak diwajibkan sama)
 				</li>
 				<li>
@@ -501,7 +501,7 @@ const data = [
 				</li>
 				<li>
 					Peserta yang memenuhi ketentuan pendaftaran akan diundang ke grup line
-					dan berhak untuk mengumpulkan
+					dan berhak untuk mengumpulkan karyanya
 				</li>
 			</ol>
 		),
@@ -510,11 +510,11 @@ const data = [
 				<li>
 					Puisi yang akan dimusikalisasi merupakan karya orisinil peserta yang
 					belum pernah dipublikasikan, diikutsertakan dalam perlombaan lain, dan
-					/atau digunakan untuk media
+					/atau digunakan untuk media komukasi
 				</li>
 				<li>
 					Puisi dan video musikalisasi dibuat semenarik, dan sekreatif mungkin
-					dengan memperhatikan
+					dengan memperhatikan tema
 				</li>
 				<li>
 					Puisi dan video musikalisasi tidak boleh memuat unsur pornografi,
@@ -540,11 +540,11 @@ const data = [
 				<li>
 					Peserta wajib mengunggah video musikalisasi puisi ke IGTV di akun
 					Instagram salah satu anggota kelompok pada waktu yang ditentukan
-					dengan menandai akun resmi Instagram Aku Masuk ITB
+					dengan menandai akun resmi Instagram Aku Masuk ITB 2021
 				</li>
 				<li>
 					Puisi dan video musikalisasi yang dikumpulkan menjadi hak peserta dan
-					panitia lomba Aku Masuk ITB
+					panitia lomba Aku Masuk ITB 2021
 				</li>
 			</ol>
 		),
@@ -714,7 +714,7 @@ const data = [
 				</li>
 				<li>
 					Peserta yang memenuhi ketentuan pendaftaran akan diundang ke grup line
-					dan berhak untuk mengumpulkan
+					dan berhak untuk mengumpulkan karyanya
 				</li>
 			</ol>
 		),
@@ -742,7 +742,7 @@ const data = [
 				</li>
 				<li>
 					Pada tahap 1, karya yang dikumpulkan berupa sketsa (belum diwarnai);
-					Pada tahap 2 karya yang dikumpulkan berupa komik karikatur
+					Pada tahap 2 karya yang dikumpulkan berupa komik karikatur berwarna
 				</li>
 				<li>
 					Komik karikatur berukuran A3 (297 / 420mm) dengan posisi diperbolehkan
@@ -760,7 +760,7 @@ const data = [
 				</li>
 				<li>
 					Pengumpulan karya yaitu berupa komik karikatur yang dikumpulkan
-					melalui formulir google form yang telah disediakan Format penamaan
+					melalui formulir google form yang telah disediakan panitia. Format penamaan
 					file komik karikatur adalah AMI_No Peserta_Judul.pdf.
 				</li>
 				<li>
@@ -787,7 +787,11 @@ const data = [
 				<div>
 					<strong>2.&nbsp; Tahap kedua (ekshibisi) :</strong>
 					<ol>
-						<li>Ekshibisi dilaksanakan daring / online pada web com</li>
+						<li>Ekshibisi dilaksanakan daring / online pada web{" "}
+							<a href='http://www.akumasukitb.com/'>
+								<strong>akumasukitb.com</strong>
+							</a>
+						</li>
 						<li>
 							Ekshibisi akan menampilkan komik karikatur yang telah lolos eleksi
 							sebelumnya.
@@ -826,7 +830,7 @@ const data = [
 				<div>
 					<strong>
 						4.&nbsp; Pemenang akan diumumkan saat ITB DAY dan melalui kanal
-						media sosial resmi Aku Masuk ITB
+						media sosial resmi Aku Masuk ITB 2021
 					</strong>
 				</div>
 				<div>
