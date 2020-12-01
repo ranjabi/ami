@@ -8,11 +8,14 @@
   h1 {
     text-align: center;
   }
+  button{
+    margin : 10vh 0 15vh 0;
+  }
 }
 
 .competitions-container {
   @include flex_center(row);
-  @include setup_size(100%, 75vh);
+  @include setup_size(100%, fit-content);
   align-items: flex-start;
   padding-top: 50px;
   & > * {
