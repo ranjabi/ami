@@ -3,13 +3,15 @@ import React from "react";
 const data = [
 	{
 		url: "yuk-visualkan",
-		judul: "Yuk Visualkan",
+		judul: "Yuk Visualkan !",
 		tema: "Perguruan Tinggi Sebagai Bekal untuk Masa Depan",
 		deskripsi: `"Yuk Visualkan" merupakan salah satu lomba yang diselenggarakan oleh Aku Masuk ITB 2021 berbentuk kreasi desain poster. Sasaran lomba ini adalah siswa- siswi SMA atau sederajat. Lomba ini diadakan sebagai wadah refleksi pentingnya pendidikan tinggi baik untuk diri sendiri maupun lingkungan sekitar.`,
 		linkPendaftaran: "https://bit.ly/YukVisualkanAMI",
 		ketentuanPeserta: (
 			<ol>
-				<li>Peserta merupakan pelajar SMA atau sederajat dan bersifat</li>
+				<li>
+					Peserta merupakan pelajar SMA atau sederajat dan bersifat individu
+				</li>
 				<li>
 					Peserta wajib membayar pendaftaran sebesar Rp 25.000,00 ke rekening
 					90015104314 n Suci Ayu Chairuna Natalya (Jenius)
@@ -44,7 +46,7 @@ const data = [
 				</li>
 				<li>
 					Peserta yang memenuhi ketentuan pendaftaran akan diundang ke grup line
-					dan berhak untuk mengumpulkan
+					dan berhak untuk mengumpulkan karyanya
 				</li>
 			</ol>
 		),
@@ -53,26 +55,26 @@ const data = [
 				<li>
 					Poster yang dikumpulkan merupakan karya orisinil peserta yang belum
 					pernah dipublikasikan, diikutsertakan dalam perlombaan lain, dan /atau
-					digunakan untuk media
+					digunakan untuk media komunikasi
 				</li>
 				<li>
 					Poster dibuat semenarik, sekreatif, dan seinformatif mungkin dengan
-					memperhatikan tema dan dapat memvisualkan pertanyaan &ldquo;Kenapa
-					harus melanjutkan pendidikan ke perguruan tinggi?&rdquo;
+					memperhatikan tema dan dapat memvisualkan pertanyaan "Kenapa harus
+					melanjutkan pendidikan ke perguruan tinggi?";
 				</li>
-				<li>Teknis dan gaya pembuatan poster</li>
+				<li>Teknis dan gaya pembuatan poster bebas</li>
 				<li>
 					Poster tidak boleh memuat unsur pornografi, kekerasan, dan menyinggung
 					SARA (suku, agama, ras, dan antar golongan)
 				</li>
-				<li>Poster dibuat dengan software / aplikasi desain </li>
+				<li>Poster dibuat dengan software / aplikasi desain apapun</li>
 				<li>
 					Poster berukuran A3 (297 x 420 mm) dengan posisi diperbolehkan
 					landscape atau portrait dengan format .png
 				</li>
 				<li>
 					Peserta wajib membuat uraian singkat terdiri dari 100 - 200 kata yang
-					mengandung deskripsi dan makna
+					mengandung deskripsi dan makna poster
 				</li>
 				<li>
 					Uraian singkat poster ditulis dalam Bahasa Indonesia yang baik dan
@@ -82,12 +84,12 @@ const data = [
 				<li>
 					Pengumpulan karya yaitu berupa poster dan uraian singkat yang
 					dikumpulkan melalui formulir google form yang telah disediakan
-					panitia. Format penamaan file poster adalah Nama Lengkap_Asal
-					Sekolah_Yuk png.
+					panitia. Format penamaan file poster adalah "Nama Lengkap_Asal
+					Sekolah_Yuk Visualkan.png"
 				</li>
 				<li>
 					Poster yang dikumpulkan menjadi hak peserta dan panitia lomba Aku
-					Masuk ITB
+					Masuk ITB 2021
 				</li>
 			</ol>
 		),
@@ -102,14 +104,14 @@ const data = [
 						</li>
 						<li>
 							Seleksi berikutnya berdasarkan penilaian langsung oleh juri yang
-							telah ditunjuk panitia dan menghasilkan 15 karya
+							telah ditunjuk panitia dan menghasilkan 15 karya terbaik
 						</li>
 					</ol>
 				</li>
 				<li>
 					<strong>Tahap kedua (ekshibisi) :</strong>
 					<ol>
-						<li>Ekshibisi dilaksanakan daring / online pada web com</li>
+						<li>Ekshibisi dilaksanakan daring / online pada web akumasukitb.com</li>
 						<li>
 							Ekshibisi akan menampilkan poster dan uraian yang telah lolos
 							seleksi sebelumnya.
@@ -142,7 +144,7 @@ const data = [
 						</ul>
 						<li>
 							Pemenang akan diumumkan saat ITB DAY dan melalui kanal media
-							sosial resmi Aku Masuk ITB
+							sosial resmi Aku Masuk ITB 2021
 						</li>
 					</ol>
 				</li>
@@ -206,15 +208,15 @@ const data = [
 		linkPendaftaran: "https://bit.ly/CheckMissionAMI",
 		ketentuanPeserta: (
 			<ol>
-				<li>Peserta merupakan pelajar SMA atau</li>
+				<li>Peserta merupakan pelajar SMA atau sederajat</li>
 				<li>
-					Lomba ini bersifat Setiap kelompok terdiri dari tiga orang.
+					Lomba ini bersifat kelompok. Setiap kelompok terdiri dari tiga orang.
 					<br />
 					(asal sekolah setiap anggota tidak diwajibkan sama)
 				</li>
 				<li>
 					Peserta wajib membayar pendaftaran sebesar Rp30.000,00 ke rekening
-					90015104314 a.n Ayu Chairuna Natalya (Jenius)
+					90015104314 a.n Suci Ayu Chairuna Natalya (Jenius)
 				</li>
 				<li>
 					Peserta wajib mengisi formulir pendaftaran (google form) yang tertera
@@ -248,12 +250,12 @@ const data = [
 		),
 		ketentuanKarya: (
 			<ol>
-				<li>Rangkaian lomba hanya diadakan dalam satu</li>
+				<li>Rangkaian lomba hanya diadakan dalam satu hari</li>
 				<li>
 					Tahap persiapan :
 					<ol>
 						<li>Seluruh peserta memasuki google meet yang telah ditentukan</li>
-						<li>Panitia membacakan peraturan dan sistem</li>
+						<li>Panitia membacakan peraturan dan sistem lomba</li>
 						<li>Pembagian urutan kelompok</li>
 					</ol>
 				</li>
@@ -266,7 +268,7 @@ const data = [
 						</li>
 						<li>
 							Pada tahap ini, setiap kelompok akan diberikan suatu rangkaian
-							huruf yang acak yang sama yang akan ditampilkan di
+							huruf yang acak yang sama yang akan ditampilkan di web
 						</li>
 						<li>
 							Peserta menyusun huruf acak tersebut menjadi kata baku yang sesuai
@@ -282,12 +284,12 @@ const data = [
 					Tahap kedua :
 					<ol>
 						<li>
-							Seluruh peserta meninggalkan google meet Kemudian membuka peta
+							Seluruh peserta meninggalkan google meet utama. Kemudian membuka peta
 							yang telah tersedia di web.
 						</li>
 						<li>
 							Terdapat lima pos di dalam peta yang berisi link google meet dan
-							peraturan untuk masing-masing
+							peraturan untuk masing-masing pos
 						</li>
 						<li>
 							Para peserta memasuki empat pos pertama sesuai urutan yang telah
@@ -339,7 +341,7 @@ const data = [
 									<br />
 								</li>
 								<li>
-									POS 5 : Test Your br/ain
+									POS 5 : Test Your brain
 									<br />
 									Tema : Jalur Masuk dan Jenis Perguruan Tinggi di Indonesia.
 									<br />
@@ -359,11 +361,11 @@ const data = [
 					<ol>
 						<li>
 							Setiap kata yang ditemukan dan benar sesuai dengan KBBI diberikan
-							poin 10 per
+							poin 10 per kata
 						</li>
 						<li>
 							Perolehan poin total akan dijadikan poin modal awal dalam memulai
-							misi pos
+							misi pos selanjutnya
 						</li>
 					</ol>
 				</li>
@@ -390,7 +392,7 @@ const data = [
 					<ol>
 						<li>
 							Pemenang lomba ditentukan berdasarkan perolehan poin tertinggi
-							yang didapat dari awal sampai akhir
+							yang didapat dari awal sampai akhir misi
 						</li>
 						<li>
 							Pemenang lomba akan mendapatkan sertifikat digital pemenang dan
@@ -403,7 +405,7 @@ const data = [
 						</li>
 						<li>
 							Pemenang akan diumumkan saat ITB DAY dan melalui kanal media
-							sosial resmi Aku Masuk ITB
+							sosial resmi Aku Masuk ITB 2021
 						</li>
 					</ol>
 				</li>
@@ -433,7 +435,7 @@ const data = [
 					<tr>
 						<td>3.</td>
 						<td>Technical Meeting Virtual</td>
-						<td>9 Januari - 10 Januari 2020</td>
+						<td>9 Januari - 10 Januari 2021</td>
 					</tr>
 					<tr>
 						<td>4.</td>
