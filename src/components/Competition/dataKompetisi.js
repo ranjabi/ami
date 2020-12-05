@@ -684,7 +684,7 @@ const data = [
           Peserta merupakan pelajar SMA atau sederajat dan bersifat individu
         </li>
         <li>
-          Peserta wajib membayar pendaftaran sebesar Rp 30.000,00 ke rekening
+          Peserta wajib membayar pendaftaran sebesar Rp 25.000,00 ke rekening
           90015104314 n Suci Ayu Chairuna Natalya (Jenius)
         </li>
         <li>
