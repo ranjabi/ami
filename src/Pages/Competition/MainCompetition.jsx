@@ -8,7 +8,7 @@ import "./MainCompetition.scss";
 export const MainCompetition = () => {
 
   const pdfLink =
-		"https://drive.google.com/file/d/1HbKnCx6Ux0uuTF96xRUL2tollPpNwip1/view?usp=sharing";
+		"https://drive.google.com/file/d/19h5alcJ1DTqS8LiSpU4lmST5Z2g0YD1g/view?usp=sharing";
 
   const downloadPDF = () => {
 		window.open(pdfLink, "_blank");
