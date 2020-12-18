@@ -538,6 +538,9 @@ const data = [
           pembukaan dan penutupan)
         </li>
         <li>
+          Peserta diperkenankan memotong dan/atau menyunting audio dan video
+        </li>
+        <li>
           Video musikalisasi puisi harus menampilkan semua anggota kelompok
           tetapi tidak diharuskan berada pada satu tempat yang sama
         </li>
