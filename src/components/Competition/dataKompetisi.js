@@ -166,7 +166,7 @@ const data = [
           <tr>
             <td>1</td>
             <td>Pendaftaran dan Verifikasi Peserta</td>
-            <td>1 Desember – 10 Desember 2020</td>
+            <td>1 Desember – 20 Desember 2020</td>
           </tr>
           <tr>
             <td>2</td>
@@ -427,12 +427,12 @@ const data = [
           <tr>
             <td>1.</td>
             <td>Pendaftaran</td>
-            <td>1 Desember – 14 Desember 2020</td>
+            <td>1 Desember – 27 Desember 2020</td>
           </tr>
           <tr>
             <td>2.</td>
             <td>Verifikasi Peserta</td>
-            <td>15 Desember – 20 Desember 2020</td>
+            <td>15 Desember – 27 Desember 2020</td>
           </tr>
           <tr>
             <td>3.</td>
@@ -525,8 +525,20 @@ const data = [
           kekerasan, dan menyinggung SARA (suku, agama, ras, dan antar golongan)
         </li>
         <li>
+          Puisi dinyanyikan secara utuh (tidak dideklamasikan atau didramatisasi)
+        </li>
+        <li>
+          Jika terdapat pengulangan, puisi dinyanyikan secara utuh, tidak hanya sebagian.
+        </li>
+        <li>
+          Genre musikalisasi puisi dibebaskan sesuai dengan genre musik yang ada.
+        </li>
+        <li>
           Video musikalisasi puisi dibuat dengan durasi maksimal 7 menit (tanpa
           pembukaan dan penutupan)
+        </li>
+        <li>
+          Peserta diperkenankan memotong dan/atau menyunting audio dan video
         </li>
         <li>
           Video musikalisasi puisi harus menampilkan semua anggota kelompok
@@ -636,7 +648,7 @@ const data = [
           <tr>
             <td>1.</td>
             <td>Pendaftaran dan Verifikasi Peserta</td>
-            <td>1 Desember – 20 Desember 2020</td>
+            <td>1 Desember – 27 Desember 2020</td>
           </tr>
           <tr>
             <td>2.</td>
@@ -856,12 +868,12 @@ const data = [
           <tr>
             <td>1.</td>
             <td>Pendaftaran dan Verifikasi Peserta</td>
-            <td>1 Desember – 14 Desember 2020</td>
+            <td>1 Desember – 20 Desember 2020</td>
           </tr>
           <tr>
             <td>2.</td>
             <td>Pengumpulan Karya tahap 1</td>
-            <td>7 Desember – 23 Desember 2020</td>
+            <td>7 Desember – 27 Desember 2020</td>
           </tr>
           <tr>
             <td>3.</td>
