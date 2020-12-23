@@ -55,6 +55,22 @@
         .react-read-more-read-less{
             color: #5fdcde;
         }
+        .prev,.next{
+            position: fixed;
+            top : 50%;
+            transform: translateY(-50%);
+            font-size: 36px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .prev{
+           
+            left : 2.5vw;
+        }
+        .next{
+            right : 2.5vw;
+        }
     }
 
     .footerCerita {
@@ -66,4 +82,10 @@
             max-width: 680px;
         }
     }
+}
+
+@media (max-width: 600px) {
+  .prev,.next{
+      display: none;
+  }
 }
