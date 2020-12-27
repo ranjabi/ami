@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Layout } from "../Layout/Layout";
 import { Dropdown } from "../../components/Form/Form";
 import data from "./data.json";
@@ -49,7 +49,7 @@ export const MainCerita = () => {
         className="mainCerita-container"
       >
         <h1>Cerita Inspiratif</h1>
-        <div className="youtube-wrapper">
+        {/* <div className="youtube-wrapper">
           <iframe
             src="https://www.youtube.com/embed/CYr2r8GXBJM"
             frameBorder="0"
@@ -66,7 +66,7 @@ export const MainCerita = () => {
           feugiat in ante. Tortor id aliquet lectus proin. Proin sagittis nisl
           rhoncus mattis. Mattis pellentesque id nibh tortor. Tristique nulla
           aliquet enim tortor at auctor. Eget lorem dolor sed viverra ipsum.
-        </p>
+        </p> */}
         <div
           className={"headerCerita " + (headerScrolled ? "headerScrolled" : "")}
         >
@@ -96,20 +96,22 @@ export const MainCerita = () => {
         {data[ceritaId].youtube && (
           <div className="youtube-wrapper">
             <iframe
-              src="https://www.youtube.com/embed/CYr2r8GXBJM"
+              src={data[ceritaId].youtube}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              title="Youtube Video"
             ></iframe>
           </div>
         )}
         {data[ceritaId].spotify && (
           <div className="spotify-wrapper">
             <iframe
-              src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3"
+              src={data[ceritaId].spotify}
               frameBorder="0"
               allowtransparency="true"
               allow="encrypted-media"
+              title="Spotify Podcast"
             ></iframe>
           </div>
         )}
