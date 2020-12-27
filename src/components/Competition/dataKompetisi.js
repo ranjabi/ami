@@ -171,12 +171,12 @@ const data = [
           <tr>
             <td>2</td>
             <td>Pengumpulan Karya</td>
-            <td>21 Desember – 23 Desember 2020</td>
+            <td>21 Desember – 31 Desember 2020</td>
           </tr>
           <tr>
             <td>3</td>
             <td>Seleksi Internal</td>
-            <td>24 Desember, 26-27 Desember 2020</td>
+            <td>1 - 3 Januari 2021</td>
           </tr>
           <tr>
             <td>4</td>
@@ -650,27 +650,27 @@ const data = [
           <tr>
             <td>1.</td>
             <td>Pendaftaran dan Verifikasi Peserta</td>
-            <td>1 Desember – 27 Desember 2020</td>
+            <td>1 Desember 2020 – 3 Januari 2021</td>
           </tr>
           <tr>
             <td>2.</td>
             <td>Pengerjaan Karya</td>
-            <td>22 Desember 2020 – 10 Januari 2021</td>
+            <td>1 Januari – 11 Januari 2021</td>
           </tr>
           <tr>
             <td>3.</td>
             <td>Pengumpulan Karya</td>
-            <td>1 Januari – 10 Januari 2021</td>
+            <td>1 Januari – 11 Januari 2021</td>
           </tr>
           <tr>
             <td>4.</td>
             <td>Pengunggahan karya ke IGTV</td>
-            <td>11 Januari - 15 Januari 2021</td>
+            <td>12 Januari - 14 Januari 2021</td>
           </tr>
           <tr>
             <td>5.</td>
             <td>Penilaian Lomba</td>
-            <td>1 Januari – 15 Januari 2021</td>
+            <td>15 Januari – 18 Januari 2021</td>
           </tr>
           <tr>
             <td>6.</td>
