@@ -1,0 +1,156 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
+.mainCerita-container {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+
+  p {
+    font-family: LailaMedium;
+    color: white;
+  }
+
+  .headerCerita {
+    width: 100%;
+    padding: 0 20px;
+    padding-bottom: 10px;
+    margin: 5vh 0 2vh;
+    transition: padding, background-color 200ms;
+    position: sticky;
+    top: 0;
+    background: $a_darkPurple;
+    z-index: 5;
+
+    .ddChangeCerita {
+      max-width: 680px;
+      margin: 0 auto;
+      select {
+        border-bottom: 0;
+        text-transform: uppercase;
+        text-align: center;
+        text-align-last: center;
+        option {
+          color: #58298d;
+          text-transform: unset;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .headerScrolled {
+    position: fixed;
+    padding: 10px 20px;
+    top: -1px;
+    background-color: #4f3363;
+  }
+
+  .bodyCerita {
+    // max-width: 680px;
+    padding: 0 20px;
+    margin: 0 auto;
+    flex-grow: 1;
+    font-family: LailaMedium;
+    color: white;
+    white-space: pre-wrap;
+    .react-read-more-read-less {
+      color: #5fdcde;
+    }
+    .prev,
+    .next {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 36px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .prev {
+      left: 2.5vw;
+    }
+    .next {
+      right: 2.5vw;
+    }
+  }
+
+  .footerCerita {
+    .footerContainer {
+      margin: 0 auto;
+      margin-top: 10px;
+      padding: 20px 20px;
+      border-top: 1px solid #fff;
+      max-width: 680px;
+    }
+  }
+}
+
+.youtube-wrapper {
+  //   padding-bottom: 56.1%;
+  position: relative;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 60vh;
+  height: 60vh;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.spotify-wrapper {
+  //   padding-bottom: 56.1%;
+  position: relative;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 600px;
+  height: 232px;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .mainCerita-container {
+    width: 80%;
+  }
+  .youtube-wrapper {
+    max-height: 30vh;
+    height: 30vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainCerita-container {
+    width: 90%;
+  }
+  .prev,
+  .next {
+    display: none;
+  }
+}

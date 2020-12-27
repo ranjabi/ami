@@ -1,5 +1,6 @@
 import { MainCompetition } from "../Pages/Competition/MainCompetition";
 import { Homepage } from "../Pages/Homepage/Homepage";
+import { MainCerita } from "../Pages/CeritaInspiratif/MainCerita";
 // import { Organogram } from "../Pages/Organogram/Organogram";
 
 import YukVisualkanImg from "../images/yuk-visualkan.png";
@@ -27,6 +28,12 @@ export const routes = [
     component: MainCompetition,
     afterLoggedIn: false,
   },
+  {
+    label: "Cerita Inspiratif",
+    path: "/cerita",
+    component: MainCerita,
+    afterLoggedIn: false
+  }
 ];
 
 export const competitionRoutes = [
@@ -53,5 +60,11 @@ export const competitionRoutes = [
     image: MusikalisasiPuisiImg,
     path: "/lomba/musikalisasi-puisi",
     component: CompetitionPage,
+  },
+];
+
+export const ceritaInpiratifRoutes = [
+  {
+    
   },
 ];

@@ -171,12 +171,12 @@ const data = [
           <tr>
             <td>2</td>
             <td>Pengumpulan Karya</td>
-            <td>21 Desember – 23 Desember 2020</td>
+            <td>21 Desember – 31 Desember 2020</td>
           </tr>
           <tr>
             <td>3</td>
             <td>Seleksi Internal</td>
-            <td>24 Desember, 26-27 Desember 2020</td>
+            <td>1 - 3 Januari 2021</td>
           </tr>
           <tr>
             <td>4</td>
@@ -325,7 +325,9 @@ const data = [
                   <br />
                 </li>
                 <li>
-                  POS 3 : Menyusun Puzzle Tema : Lokasi dan Gedung ITB
+                  POS 3 : Menyusun Puzzle 
+                  <br/>
+                  Tema : Lokasi dan Gedung ITB
                   <br />
                   Peserta akan menyusun puzzle berupa potongan gambar terkait
                   tema pos.
@@ -427,12 +429,12 @@ const data = [
           <tr>
             <td>1.</td>
             <td>Pendaftaran</td>
-            <td>1 Desember – 27 Desember 2020</td>
+            <td>1 Desember 2020 – 3 Januari 2021</td>
           </tr>
           <tr>
             <td>2.</td>
             <td>Verifikasi Peserta</td>
-            <td>15 Desember – 27 Desember 2020</td>
+            <td>15 Desember 2020 – 3 Januari 2021</td>
           </tr>
           <tr>
             <td>3.</td>
@@ -648,27 +650,27 @@ const data = [
           <tr>
             <td>1.</td>
             <td>Pendaftaran dan Verifikasi Peserta</td>
-            <td>1 Desember – 27 Desember 2020</td>
+            <td>1 Desember 2020 – 3 Januari 2021</td>
           </tr>
           <tr>
             <td>2.</td>
             <td>Pengerjaan Karya</td>
-            <td>22 Desember 2020 – 10 Januari 2021</td>
+            <td>1 Januari – 11 Januari 2021</td>
           </tr>
           <tr>
             <td>3.</td>
             <td>Pengumpulan Karya</td>
-            <td>1 Januari – 10 Januari 2021</td>
+            <td>1 Januari – 11 Januari 2021</td>
           </tr>
           <tr>
             <td>4.</td>
             <td>Pengunggahan karya ke IGTV</td>
-            <td>11 Januari - 15 Januari 2021</td>
+            <td>12 Januari - 14 Januari 2021</td>
           </tr>
           <tr>
             <td>5.</td>
             <td>Penilaian Lomba</td>
-            <td>1 Januari – 15 Januari 2021</td>
+            <td>15 Januari – 18 Januari 2021</td>
           </tr>
           <tr>
             <td>6.</td>
@@ -796,7 +798,7 @@ const data = [
             </li>
             <li>
               Seleksi berikutnya berdasarkan penilaian langsung oleh dua juri
-              yang telah ditunjuk panitia dan menghasilkan 8 karya
+              yang telah ditunjuk panitia dan menghasilkan 8 karya terbaik.
             </li>
           </ol>
         </div>
@@ -868,27 +870,27 @@ const data = [
           <tr>
             <td>1.</td>
             <td>Pendaftaran dan Verifikasi Peserta</td>
-            <td>1 Desember – 20 Desember 2020</td>
+            <td>1 Desember 2020 – 3 Januari 2021</td>
           </tr>
           <tr>
             <td>2.</td>
             <td>Pengumpulan Karya tahap 1</td>
-            <td>7 Desember – 27 Desember 2020</td>
+            <td>1 Januari – 7 Januari 2021</td>
           </tr>
           <tr>
             <td>3.</td>
             <td>Seleksi Tahap 1</td>
-            <td>23 Desember 2020 - 3 Januari 2021</td>
+            <td>8 Januari - 10 Januari 2021</td>
           </tr>
           <tr>
             <td>4.</td>
             <td>Pengumuman Seleksi Tahap 1</td>
-            <td>4 Januari 2021</td>
+            <td>11 Januari 2021</td>
           </tr>
           <tr>
             <td>5.</td>
             <td>Pengumpulan Karya Tahap 2</td>
-            <td>8 Januari – 20 Januari 2021</td>
+            <td>18 Januari – 24 Januari 2021</td>
           </tr>
           <tr>
             <td>6.</td>
@@ -898,7 +900,7 @@ const data = [
           <tr>
             <td>7.</td>
             <td>Seleksi Tahap 2</td>
-            <td>20 Januari - 5 Februari 2021</td>
+            <td>25 Januari - 31 Januari 2021</td>
           </tr>
           <tr>
             <td>8.</td>
