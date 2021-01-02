@@ -49,24 +49,22 @@ export const MainCerita = () => {
         className="mainCerita-container"
       >
         <h1>Cerita Inspiratif</h1>
-        {/* <div className="youtube-wrapper">
+        <div className="youtube-wrapper">
           <iframe
-            src="https://www.youtube.com/embed/CYr2r8GXBJM"
+            src="https://www.youtube.com/embed/FYGIY7EIEos"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            title="epilog cerita inspiratif"
           ></iframe>
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus sed
-          viverra tellus in hac habitasse platea dictumst vestibulum. Imperdiet
-          nulla malesuada pellentesque elit eget. Id volutpat lacus laoreet non
-          curabitur gravida arcu ac tortor. Turpis tincidunt id aliquet risus
-          feugiat in ante. Tortor id aliquet lectus proin. Proin sagittis nisl
-          rhoncus mattis. Mattis pellentesque id nibh tortor. Tristique nulla
-          aliquet enim tortor at auctor. Eget lorem dolor sed viverra ipsum.
-        </p> */}
+          Aini, Ashilla, dan Prabowo sudah membuktikan untuk; jangan pernah
+          berhenti. Tidak masalah seberapa lambat kamu berjalan, seberapa lama
+          perhentianmu, seberapa sakit yang kamu alami, asalkan kamu tidak
+          berhenti untuk menggapai mimpi mu. Kami tunggu kalian menjadi salah
+          satu bagian dari kami.
+        </p>
         <div
           className={"headerCerita " + (headerScrolled ? "headerScrolled" : "")}
         >
