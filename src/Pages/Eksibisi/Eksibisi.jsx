@@ -25,7 +25,7 @@ export const Eksibisi = () => {
 	let data14 = data[14];
 	let data15 = data[15];
 
-	const formLink = "https://docs.google.com/forms/u/0/d/1IRQYB9l8jTBrVgIorV9XECVq-3RbCbnNMvsaEkXT390/viewform?edit_requested=true";
+	const formLink = "https://docs.google.com/forms/d/e/1FAIpQLScrvirwNupP-hn-gGtB_8xkX6fybym7ipuX2jFeW_L_Yx901g/viewform";
 
 	const openForm = () => {
 		window.open(formLink, "_blank");
