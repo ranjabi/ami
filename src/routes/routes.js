@@ -1,6 +1,7 @@
 import { MainCompetition } from "../Pages/Competition/MainCompetition";
 import { Homepage } from "../Pages/Homepage/Homepage";
 import { MainCerita } from "../Pages/CeritaInspiratif/MainCerita";
+import { Eksibisi } from "../Pages/Eksibisi/Eksibisi";
 // import { Organogram } from "../Pages/Organogram/Organogram";
 
 import YukVisualkanImg from "../images/yuk-visualkan.png";
@@ -32,6 +33,12 @@ export const routes = [
     label: "Cerita Inspiratif",
     path: "/cerita",
     component: MainCerita,
+    afterLoggedIn: false
+  },
+  {
+    label: "Eksibisi",
+    path: "/eksibisi",
+    component: Eksibisi,
     afterLoggedIn: false
   }
 ];

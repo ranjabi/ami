@@ -1,0 +1,14 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
+.card-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+  }
+  button {
+    margin : 10vh 0 10vh 0;
+  }
+}
