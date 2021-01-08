@@ -23,8 +23,9 @@
   display: flex;
   flex-direction: row;
   img {
-    width: 50vh;
+    width: 40vh;
     padding: 5%;
+    object-fit: contain;
   }
 }
 
