@@ -6,7 +6,8 @@ import {
   withRouter,
 } from "react-router-dom";
 import AppRoute from "./routes/AppRoute";
-import { routes, competitionRoutes } from "./routes/routes";
+import { isGameOpen } from "./Pages/Game/data";
+import { routes, competitionRoutes, petaRoutes, petaComponent, gamesRoutes } from "./routes/routes";
 import "./styles/base.scss";
 
 class _ScrollToTop extends React.Component {
@@ -41,6 +42,23 @@ function App() {
               path={route.path}
               key={route.path}
               component={route.component}
+            />
+          ))}
+          {isGameOpen && gamesRoutes.map((route) => (
+            <AppRoute
+              exact
+              path={route.path}
+              key={route.path}
+              component={route.component}
+            />
+          ))}
+          {petaRoutes.map((route, index) => (
+            <AppRoute
+              exact
+              path={route.path}
+              key={route.path}
+              component={petaComponent}
+              customProps={{pos: index+1}}
             />
           ))}
           <Redirect to="/" />

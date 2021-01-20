@@ -1,0 +1,47 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
+.menyusunkata-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+    margin: 2vh 0 10vh 0;
+  }
+  button {
+    margin: 10vh 40vh 15vh 40vh;
+    width: 50%;
+  }
+}
+
+.kataacak-container {
+  h2 {
+    text-align: center;
+    font-family: LailaMedium;
+    font-size: 60px;
+    color: $f_mainColor;
+    border: solid 2px;
+    padding: 8vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menyusunkata-container {
+    h1 {
+      margin-bottom: 5vh;
+    }
+    button {
+      margin: 2vh 14vh 8em;
+      font-size: 15px;
+    }
+  }
+  .kataacak-container {
+    h2 {
+      font-size: 25px;
+      padding: 2vh;
+      border: none;
+      margin-bottom: 4vh;
+    }
+  }
+}

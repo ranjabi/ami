@@ -1,0 +1,14 @@
+.Modal-container {
+    justify-content: unset!important;
+}
+
+#ctm {
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    text-align: center;
+
+    .button {
+        max-width: 380px;
+    }
+}
