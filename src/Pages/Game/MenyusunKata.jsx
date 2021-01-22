@@ -23,8 +23,10 @@ export const MenyusunKata = () => {
         <div className="kataacak-container">
           <h2>I N S T I T U T  T E K N O L O G I  B A N D U N G</h2>
         </div>
-        <Button onClick={openFormSubmit} text="Form Submit" />
-        <Button onClick={nextGame} text="Game Selanjutnya" />
+        <div className="buttons">
+          <Button onClick={openFormSubmit} text="Form Submit" />
+          <Button onClick={nextGame} text="Game Selanjutnya" />
+        </div>
       </div>
     </Layout>
   );

@@ -5,11 +5,11 @@ export const gameClosed = {
     nama: "Game Belum Dibuka",
     message: `Maaf, game akan dibuka pada hari ${new Intl.DateTimeFormat(['id', 'en'], { dateStyle: 'full'}).format(gameDate)} jam ${gameDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}`
 }
-export const menyusunKataLink = "https://google.com";
+export const menyusunKataLink = "https://forms.gle/rShzBt5XkcWeDwVQ8";
 export const gameRules = [
     {
       nama: "PERATURAN POS WAJIB",
-      link: "https://google.com",
+      link: "https://meet.google.com/ggx-mrgx-qpu",
       peraturan: (
         <ol>
           <li>
@@ -70,7 +70,7 @@ export const gameRules = [
     },
     {
       nama: "POS 1: TEBAK GAMBAR",
-      link: "https://youtube.com",
+      link: "https://meet.google.com/icv-cunu-bvk",
       peraturan: (
         <ol>
           <li>
@@ -124,7 +124,7 @@ export const gameRules = [
     },
     {
       nama: "POS 2: BENAR ATAU SALAH",
-      link: "https://twitter.com",
+      link: "https://meet.google.com/wvp-xgbz-joa",
       peraturan: (
         <ol>
           <li>
@@ -175,7 +175,7 @@ export const gameRules = [
     },
     {
       nama: "POS 3: PUZZLE",
-      link: "https://facebook.com",
+      link: "https://meet.google.com/exb-duyi-fju",
       peraturan: (
         <ol>
           <li>
@@ -230,7 +230,7 @@ export const gameRules = [
     },
     {
       nama: "POS 4: TTS",
-      link: "https://stackoverflow.com",
+      link: "https://meet.google.com/tzp-bzwb-hsv",
       peraturan: (
         <ol>
           <li>Peserta memasuki pos dengan format nama yang telah ditentukan.</li>

@@ -31,6 +31,7 @@
       text-align: center;
       overflow-y: auto;
       -ms-overflow-style: none;
+      font-family: 'LailaMedium';
       button {
         width: 55%;
         height: 60px;
@@ -52,8 +53,10 @@
         margin: 15px 0;
       }
       span {
+        font-weight: 300;
         &#start{
-            margin: 0 2rem;
+          margin-left: 5vw;
+          margin-right: 2vw;
         }
         margin: auto;
         text-align: start;
@@ -86,11 +89,7 @@
       .Modal-container {
         button {
           font-size: 15px;
-        }
-        span {
-          &#start{
-              margin: 0 0.3rem!important;
-          }
+          margin-top: 0px;
         }
       }
     }

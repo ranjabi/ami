@@ -1,22 +1,40 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { useHistory } from 'react-router-dom';
 import { Modal } from "../../components/Modal/Modal";
 import { Layout } from "../Layout/Layout";
-import { Button } from "../../components/Form/Form";
+import { Button, InputField } from "../../components/Form/Form";
 import { gameRules } from "./data";
 import "./Final.scss"
 
 export const Final = () => {
     const history = useHistory();
     const [open, setOpen] = useState(false);
+    const [modalMessage, setModalMessage] = useState("");
     const [token, setToken] = useState("");
-    const validateToken = () => {
-        var isValid = true;
-        if(isValid){
-            window.open("https://quizizz.com/");
-            history.push(gameRules[5].endto);
-        } else {
+    const [isSendData, setIsSentData] = useState(false);
+    const validateToken = async () => {
+        try {
+            setIsSentData(true);
+            const response = await axios.post(
+                "https://api.akumasukitb.com/api/itbday",
+                {
+                    "code": token
+                }
+            );
+            if (response.data.status === "success") {
+                setIsSentData(false);
+                window.open(response.data.meet);
+                history.push(gameRules[5].endto);
+            }
+        } catch(err) {
+            if(err.response && err.response.status === 400){
+                setModalMessage("Maaf kodenya salah, silahkan coba lagi.");
+            } else {
+                setModalMessage("Maaf, ada kesalahan dari server kami :(");
+            }
             setOpen(true);
+            setIsSentData(false);
         }
     };
     
@@ -26,7 +44,7 @@ export const Final = () => {
                 <h2>Kode Salah</h2>
                 <hr />
                 <span>
-                    Maaf kodenya salah, silahkan coba lagi.
+                    {modalMessage}
                 </span>
                 <Button onClick={()=>setOpen(false)} text="Oke" />
             </Modal>
@@ -35,13 +53,14 @@ export const Final = () => {
                 <p>Selamat, kamu sampai di tahap final! Tugas terakhirmu sekarang
                     adalah masukkan token yang sudah didapatkan sebelumnya.
                 </p>
-                <div className="form">
-                    <input type="text" name="token" autoComplete="Off" value={token} onChange={(e) => setToken(e.target.value)} required/>
-                    <label>
-                        Masukkan Token
-                    </label>
-                </div>
-                <Button onClick={validateToken} text="Submit"/>
+                <InputField
+                    label="Token"
+                    hasLabel
+                    inputType="text"
+                    value={token}
+                    handleChange={setToken}
+                />
+                <Button disabled={isSendData} onClick={validateToken} text={isSendData?"...":"Submit"}/>
             </div>
         </Layout>
     )

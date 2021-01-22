@@ -34,6 +34,7 @@ const Button = (props) => (
     onClick={
       props.onClick && (() => props.onClick(props.onClickParams))
     }
+    disabled={props.disabled || false}
   >
     {props.text}
   </button>

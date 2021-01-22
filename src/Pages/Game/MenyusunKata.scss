@@ -4,14 +4,11 @@
 .menyusunkata-container {
   width: 100%;
   max-width: 1000px;
+  min-height: calc(100vh - 92px);
   margin: 0 auto;
   h1 {
     text-align: center;
     margin: 2vh 0 10vh 0;
-  }
-  button {
-    margin: 10vh 40vh 15vh 40vh;
-    width: 50%;
   }
 }
 
@@ -23,25 +20,40 @@
     color: $f_mainColor;
     border: solid 2px;
     padding: 8vh;
+    max-width: 80vw;
+    margin: 0 auto;
   }
 }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  button {
+    margin: 20px auto;
+    width: 50%;
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   .menyusunkata-container {
     h1 {
       margin-bottom: 5vh;
     }
-    button {
-      margin: 2vh 14vh 8em;
-      font-size: 15px;
-    }
   }
   .kataacak-container {
     h2 {
       font-size: 25px;
       padding: 2vh;
-      border: none;
       margin-bottom: 4vh;
+    }
+  }
+  .buttons {
+    margin-bottom: 20px;
+    button {
+      margin: 10px auto;
+      font-size: 15px;
     }
   }
 }

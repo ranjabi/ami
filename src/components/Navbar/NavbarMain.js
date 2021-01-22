@@ -1,13 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-// import { NavbarButton } from "./NavbarButton.js";
 import { routes } from "../../routes/routes.js";
-import "./Navbar.scss";
+import { Navbar } from 'react-bootstrap';
+import "./NavbarMain.scss";
 
-export const Navbar = () => {
+export const NavbarMain = () => {
   return (
-    <div className="navbar-wrapper">
-      <div className="navbar-container">
+    <Navbar collapseOnSelect expand="md">
+      <Navbar.Toggle aria-controls="navbar" />
+      <Navbar.Collapse transition="false" id="navbar">
         {routes.map((route) => (
           <NavLink
             exact={route.path === "/"}
@@ -20,7 +21,7 @@ export const Navbar = () => {
             <div className="line"></div>
           </NavLink>
         ))}
-      </div>
-    </div>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
