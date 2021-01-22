@@ -8,7 +8,7 @@ import {
 import AppRoute from "./routes/AppRoute";
 import { routes, competitionRoutes } from "./routes/routes";
 import "./styles/base.scss";
-import useGoogleAnalytics from "./shared/useAnalytics";
+// import useGoogleAnalytics from "./shared/useAnalytics";
 
 class _ScrollToTop extends React.Component {
   componentDidUpdate(prevProps) {
@@ -24,7 +24,7 @@ class _ScrollToTop extends React.Component {
 const ScrollToTop = withRouter(_ScrollToTop);
 
 function Routes() {
-  useGoogleAnalytics();
+  // useGoogleAnalytics();
   return (
     <Switch>
       {routes.map((route) => (
