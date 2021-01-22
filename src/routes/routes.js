@@ -33,14 +33,14 @@ export const routes = [
     label: "Cerita Inspiratif",
     path: "/cerita",
     component: MainCerita,
-    afterLoggedIn: false
+    afterLoggedIn: false,
   },
   {
     label: "Eksibisi",
     path: "/eksibisi",
     component: Eksibisi,
-    afterLoggedIn: false
-  }
+    afterLoggedIn: false,
+  },
 ];
 
 export const competitionRoutes = [
@@ -70,8 +70,8 @@ export const competitionRoutes = [
   },
 ];
 
-export const ceritaInpiratifRoutes = [
-  {
-    
-  },
-];
+// export const ceritaInpiratifRoutes = [
+//   {
+
+//   },
+// ];
