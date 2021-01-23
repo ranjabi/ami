@@ -9,6 +9,7 @@ import AppRoute from "./routes/AppRoute";
 import { isGameOpen } from "./Pages/Game/data";
 import { routes, competitionRoutes, petaRoutes, petaComponent, gamesRoutes } from "./routes/routes";
 import "./styles/base.scss";
+// import useGoogleAnalytics from "./shared/useAnalytics";
 
 class _ScrollToTop extends React.Component {
   componentDidUpdate(prevProps) {
@@ -23,46 +24,53 @@ class _ScrollToTop extends React.Component {
 }
 const ScrollToTop = withRouter(_ScrollToTop);
 
+function Routes() {
+  // useGoogleAnalytics();
+  return (
+    <Switch>
+      {routes.map((route) => (
+        <AppRoute
+          exact
+          path={route.path}
+          key={route.path}
+          component={route.component}
+        />
+      ))}
+      {competitionRoutes.map((route) => (
+        <AppRoute
+          exact
+          path={route.path}
+          key={route.path}
+          component={route.component}
+        />
+      ))}
+      {isGameOpen && gamesRoutes.map((route) => (
+        <AppRoute
+          exact
+          path={route.path}
+          key={route.path}
+          component={route.component}
+        />
+      ))}
+      {petaRoutes.map((route, index) => (
+        <AppRoute
+          exact
+          path={route.path}
+          key={route.path}
+          component={petaComponent}
+          customProps={{pos: index+1}}
+        />
+      ))}
+      <Redirect to="/" />
+    </Switch>
+  );
+}
+
 function App() {
   return (
     <Router>
       <ScrollToTop>
-        <Switch>
-          {routes.map((route) => (
-            <AppRoute
-              exact
-              path={route.path}
-              key={route.path}
-              component={route.component}
-            />
-          ))}
-          {competitionRoutes.map((route) => (
-            <AppRoute
-              exact
-              path={route.path}
-              key={route.path}
-              component={route.component}
-            />
-          ))}
-          {isGameOpen && gamesRoutes.map((route) => (
-            <AppRoute
-              exact
-              path={route.path}
-              key={route.path}
-              component={route.component}
-            />
-          ))}
-          {petaRoutes.map((route, index) => (
-            <AppRoute
-              exact
-              path={route.path}
-              key={route.path}
-              component={petaComponent}
-              customProps={{pos: index+1}}
-            />
-          ))}
-          <Redirect to="/" />
-        </Switch>
+        <Routes />
       </ScrollToTop>
     </Router>
   );

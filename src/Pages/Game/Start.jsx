@@ -11,7 +11,6 @@ export const StartGame = () => {
     const [open, setOpen] = useState(false);
     const modalFun = () => {
         if(isGameOpen){
-            window.open(gameRules[0].link);
             history.push("/games/menyusun-kata");
         } else
             setOpen(false);

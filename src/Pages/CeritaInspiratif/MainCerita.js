@@ -18,9 +18,6 @@ export const MainCerita = () => {
     target = target < 0 ? target + data.length : target % data.length;
     setCeritaId(target);
   };
-
-  const [headerScrolled, setHeaderScrolled] = useState(false);
-  const [navbarOffset, setNavbarOffset] = useState(0);
   // const handleScroll = () => {
   //   const offset = window.scrollY;
   //   const navbar = document.getElementsByClassName("navbar-wrapper")[0];
@@ -44,10 +41,7 @@ export const MainCerita = () => {
 
   return (
     <Layout>
-      <div
-        style={{ minHeight: "calc(100vh - " + navbarOffset + "px)" }}
-        className="mainCerita-container"
-      >
+      <div style={{ minHeight: "100vh" }} className="mainCerita-container">
         <h1>Cerita Inspiratif</h1>
         <div className="youtube-wrapper">
           <iframe
@@ -65,9 +59,7 @@ export const MainCerita = () => {
           berhenti untuk menggapai mimpi mu. Kami tunggu kalian menjadi salah
           satu bagian dari kami.
         </p>
-        <div
-          className={"headerCerita " + (headerScrolled ? "headerScrolled" : "")}
-        >
+        <div className={"headerCerita"}>
           <Dropdown
             useKey
             hideTooltip
@@ -79,10 +71,7 @@ export const MainCerita = () => {
             handleChange={changeCerita}
           ></Dropdown>
         </div>
-        <div
-          style={{ opacity: 0, display: headerScrolled ? "block" : "none" }}
-          className="headerCerita"
-        >
+        <div style={{ opacity: 0 }} className="headerCerita">
           <Dropdown
             useKey
             hideTooltip

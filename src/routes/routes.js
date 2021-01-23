@@ -38,7 +38,7 @@ export const routes = [
     label: "Cerita Inspiratif",
     path: "/cerita",
     component: MainCerita,
-    afterLoggedIn: false
+    afterLoggedIn: false,
   },
   {
     label: "Eksibisi",
