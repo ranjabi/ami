@@ -1,15 +1,14 @@
 import React from "react";
-const gameDate = new Date("2021-01-24T09:00:00+07:00");
-export const isGameOpen = true; //new Date() >= gameDate;
+export const gameDate = new Date("2021-01-24T09:00:00+07:00");
+export const isGameOpen = new Date() >= gameDate;
 export const gameClosed = {
     nama: "Game Belum Dibuka",
-    message: `Maaf, game akan dibuka pada hari ${new Intl.DateTimeFormat(['id', 'en'], { dateStyle: 'full'}).format(gameDate)} jam ${gameDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}`
+    message: `Maaf, game akan dibuka pada hari ${new Intl.DateTimeFormat(['id', 'en'], { dateStyle: 'full'}).format(gameDate)} jam ${gameDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })} WIB.`
 }
 export const menyusunKataLink = "https://forms.gle/rShzBt5XkcWeDwVQ8";
 export const gameRules = [
     {
       nama: "PERATURAN POS WAJIB",
-      link: "https://meet.google.com/ggx-mrgx-qpu",
       peraturan: (
         <ol>
           <li>

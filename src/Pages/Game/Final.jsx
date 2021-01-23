@@ -51,7 +51,8 @@ export const Final = () => {
             <div className="Final">
                 <h1>Final</h1>
                 <p>Selamat, kamu sampai di tahap final! Tugas terakhirmu sekarang
-                    adalah masukkan token yang sudah didapatkan sebelumnya.
+                    adalah masukkan token yang sudah didapatkan sebelumnya. Jika token benar,
+                    meeting untuk final akan muncul di tab baru.
                 </p>
                 <InputField
                     label="Token"

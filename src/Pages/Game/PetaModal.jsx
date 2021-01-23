@@ -18,7 +18,7 @@ export const PetaModal = (props) => {
         <span id="start">
           {gameRules[props.pos].peraturan}
         </span>
-        <Button onClick={openLink} text="Setuju" />
+        <Button onClick={openLink} text="Start the Game!" />
     </>
   );
 };
