@@ -1,0 +1,22 @@
+.finish-container {
+    text-align: center;
+    margin: 0 20px;
+    min-height: calc(100vh - 92px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    p {
+        color: white;
+        font-family: 'LailaMedium';
+        font-size: clamp(12px, 1.5vw, 24px);
+    }
+
+    .youtube-wrapper {
+      width: 100%;
+      max-width: 500px;
+      height: 45vh;
+      max-height: 45vh;
+    }
+}

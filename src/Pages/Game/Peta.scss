@@ -1,0 +1,13 @@
+#peta-container {
+    min-height: calc(100vh - 92px);
+    text-align: center;
+
+    #path-button:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    #peta {
+        margin-top: -10vw;
+    }
+}

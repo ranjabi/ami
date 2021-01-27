@@ -32,8 +32,9 @@ const Button = (props) => (
   <button
     className="button"
     onClick={
-      props.doNothing ? () => {} : () => props.onClick(props.onClickParams)
+      props.onClick && (() => props.onClick(props.onClickParams))
     }
+    disabled={props.disabled || false}
   >
     {props.text}
   </button>

@@ -12,6 +12,7 @@
 /build
 
 # misc
+/.vscode
 /_cacache
 .DS_Store
 .env.local
@@ -19,6 +20,7 @@
 .env.test.local
 .env.production.local
 .eslintcache
+anonymous-cli-metrics.json
 
 npm-debug.log*
 yarn-debug.log*

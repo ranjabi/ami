@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+.navbar {
+  padding: 26px!important;
+  .navbar-toggler {
+    border-color: $f_mainColor2!important;
+    .navbar-toggler-icon{
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2895, 220, 222, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")!important;
+    }
+  }
+  .navbar-link {
+    position: relative;
+    h4 {
+      text-align: center;
+      color: $f_mainColor2;
+      opacity: 0.7;
+      transition: all 0.25s ease;
+      font-size: clamp(1rem, 3vw, 1.3rem);
+    }
+    &:hover h4 {
+      color: $f_mainColor;
+      opacity: 1;
+    }
+    .line {
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background-color: $a_lightPurple;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 3px);
+      transition: width 0.25s ease;
+    }
+    &:hover .line {
+      width: 100%;
+    }
+    &-active {
+      h4 {
+        opacity: 1;
+      }
+    }
+  }
+  a {
+    margin: 0px 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 30px!important;
+  }
+}

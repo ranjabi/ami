@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
+.Final {
+  @include flex_center(column);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: calc(100vh - 92px);
+  h1 {
+    text-align: center;
+    margin: 4vh auto;
+    font-size: clamp(28px, 7.2vw, 72px);
+    margin-top: 0;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh 20%;
+    text-align: center;
+    color: $f_white;
+    font-family: 'LailaMedium';
+    font-size: clamp(12px, 1.5vw, 24px);
+  }
+  button {
+    width: 150px;
+    border-radius: 20px;
+    font-size: 25 px;
+    height: 40px;
+    font-family: 'LailaBold';
+    color: #5f3e74;
+    background-color: $f_mainColor2;
+    border: none;
+    margin-bottom: 5vh;
+  }
+  .button:disabled{
+    opacity: 0.5;
+  }
+}
+
+.inputField {
+  width: 40vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .Final {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inputField {
+    width: 70vw;
+  }
+}
