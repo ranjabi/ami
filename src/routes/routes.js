@@ -7,6 +7,7 @@ import { StartGame } from "../Pages/Game/Start";
 import { Final } from "../Pages/Game/Final";
 import { Peta } from "../Pages/Game/Peta";
 import { Finish } from "../Pages/Game/Finish";
+import { KomikKarikatur } from "../Pages/KomikKarikatur/KomikKarikatur";
 // import { Organogram } from "../Pages/Organogram/Organogram";
 
 import YukVisualkanImg from "../images/yuk-visualkan.png";
@@ -50,6 +51,12 @@ export const routes = [
     label: "Games",
     path: "/games/",
     component: StartGame,
+    afterLoggedIn: false
+  },
+  {
+    label: "Komik Karikatur",
+    path: "/komikkarikatur/",
+    component: KomikKarikatur,
     afterLoggedIn: false
   },
 ];
