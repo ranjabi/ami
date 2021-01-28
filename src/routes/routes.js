@@ -1,9 +1,9 @@
 import { MainCompetition } from "../Pages/Competition/MainCompetition";
 import { Homepage } from "../Pages/Homepage/Homepage";
 import { MainCerita } from "../Pages/CeritaInspiratif/MainCerita";
-import { Eksibisi } from "../Pages/Eksibisi/Eksibisi";
+// import { Eksibisi } from "../Pages/Eksibisi/Eksibisi";
 import { MenyusunKata } from "../Pages/Game/MenyusunKata";
-import { StartGame } from "../Pages/Game/Start";
+// import { StartGame } from "../Pages/Game/Start";
 import { Final } from "../Pages/Game/Final";
 import { Peta } from "../Pages/Game/Peta";
 import { Finish } from "../Pages/Game/Finish";
@@ -41,18 +41,18 @@ export const routes = [
     component: MainCerita,
     afterLoggedIn: false,
   },
-  {
-    label: "Eksibisi",
-    path: "/eksibisi",
-    component: Eksibisi,
-    afterLoggedIn: false
-  },
-  {
-    label: "Games",
-    path: "/games/",
-    component: StartGame,
-    afterLoggedIn: false
-  },
+  // {
+  //   label: "Eksibisi",
+  //   path: "/eksibisi",
+  //   component: Eksibisi,
+  //   afterLoggedIn: false
+  // },
+  // {
+  //   label: "Games",
+  //   path: "/games/",
+  //   component: StartGame,
+  //   afterLoggedIn: false
+  // },
   {
     label: "Komik Karikatur",
     path: "/komikkarikatur/",
