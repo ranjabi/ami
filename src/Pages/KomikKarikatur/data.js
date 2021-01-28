@@ -30,7 +30,7 @@ export const data = [
     waktusubmit: "12/23/2020 8:41:14",
     nama: "Keyna Audria Jasmine",
     sklh: "Madrasah Muallimaat Muhammadiyah Yogyakarta",
-    judul: "keyna to itb♥️",
+    judul: "Future Goals",
     uraian:
       "*Kelahiran Suzy🎀\nSuzy mom : Alhamdulillah birth of beauty\n*Perjalanan pendidikan Suzy🎀\nFoto oren berkerudung lilac : TK!\nFoto biru muda bertopi merah : SD!\nFoto merah bertopi biru tua : SMP!\nFoto biru tua bertopi abu² : SMA!\n*Hasil perjalanan pendidikan Suzy🎀\nSuzy Dad,Mom : Terimakasih sudah berjuang nak, now you're doctor. Congratulation!💜\n*Suzy now🎀\nSuzy : This is me! I'm Dr. Suzy Sp.B👩‍⚕️\n\nPesan : Pendidikan sangat penting, jika bersungguh sungguh menjalaninya Insyaallah cita² mu tergapai seperti Suzy🎀",
     file_poster: Img3,
