@@ -29,11 +29,11 @@ export const KomikKarikatur = () => {
 				<CardColumns>
 					<EksibisiCard data={data3}/>
 					<EksibisiCard data={data4}/>
-					<EksibisiCard data={data2}/>
+					<EksibisiCard data={data1}/>
 				</CardColumns>
 				<CardColumns>
 					<EksibisiCard data={data0}/>
-					<EksibisiCard data={data1}/>
+					<EksibisiCard data={data2}/>
 					<EksibisiCard data={data5}/>
 				</CardColumns>
 				<Button onClick={() => openForm()} onClickParams='' text="Vote" />
