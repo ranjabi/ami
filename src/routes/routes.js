@@ -8,6 +8,8 @@ import { Final } from "../Pages/Game/Final";
 import { Peta } from "../Pages/Game/Peta";
 import { Finish } from "../Pages/Game/Finish";
 import { KomikKarikatur } from "../Pages/KomikKarikatur/KomikKarikatur";
+import { MainJelajah } from "../Pages/JelajahKampus/MainJelajah";
+import { JatinangorPage } from "../Pages/JelajahKampus/JatinangorPage";
 // import { Organogram } from "../Pages/Organogram/Organogram";
 
 import YukVisualkanImg from "../images/yuk-visualkan.png";
@@ -57,6 +59,12 @@ export const routes = [
     label: "Komik Karikatur",
     path: "/komikkarikatur/",
     component: KomikKarikatur,
+    afterLoggedIn: false
+  },
+  {
+    label: "Jelajah Kampus",
+    path: "/jelajah",
+    component: MainJelajah,
     afterLoggedIn: false
   },
 ];
@@ -114,6 +122,14 @@ export const gamesRoutes = [
     label: "Finish",
     path: "/games/finish",
     component: Finish,
+  }
+]
+
+export const jelajahRoutes = [
+  {
+    label: "ITB Jatinangor",
+    path: "/jelajah/jatinangor",
+    component: JatinangorPage,
   }
 ]
 
