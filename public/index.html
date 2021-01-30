@@ -20,14 +20,116 @@
   <link rel="shortcut icon" href="/ami2021.png" />
 </head>
 
+<style>
+  .backdrop-bgm{
+    width : 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999999;
+    top : 0;
+    left : 0;
+    transition: all 0.3s ease;
+  }
+  .backdrop-bgm p{
+    font-family: Kopriva;
+    font-size: 32px;
+    position: fixed;
+    z-index: 9999999;
+    top : 50%;
+    left : 50%;
+    color : #d4d4d4; /*light purple*/
+    transform: translate(-50%,-50%);
+    animation: scaling 1s infinite alternate;
+    text-align: center;
+  }
+  .bgm-control{
+    width: 5vw;
+    height: 5vw;
+    position: fixed;
+    right: 5vw;
+    bottom: 5vh;
+    border-radius: 50%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-top : 1px solid #946293;
+    border-left : 1px solid #946293;
+    background-color: rgb(106, 65, 109); /*dark purple*/
+    box-shadow: inset -5px -5px 10px rgba(0,0,0,0.5);
+  }
+  .bgm-control:hover img{
+    width: 2.25vw;
+    filter : invert(1);
+  }
+  .bgm-control img{
+    width: 2vw;
+    filter : invert(0.8);
+    transition: all 0.3s ease;
+  }
+  @keyframes scaling{
+    from{font-size: 32px;}
+    to{font-size: 36px;}
+  }
+  @media only screen and (max-width: 600px) {
+  .bgm-control{
+    width: 7.5vh;
+    height: 7.5vh;
+  }
+  .bgm-control img{
+    width: 2.5vh;
+  }
+}
+</style>
+
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
+  <audio src="./jingle.mp3" id="bgm">BGM not supported</audio>
+  <div class="backdrop-bgm" onclick="start()"><p>Click Anywhere to Start!</p></div>
+  <div class="bgm-control" onclick="toggleMusic()">
+    <img id="bgm-control-img" src="./play.svg" alt="bgm-control"/>
+  </div>
   <div id="modal"></div>
   <div id="root">
     <div class="container">
       <img src="./logo_new.png" class="logo-ami-loading" alt="logo_ami" />
     </div>
   </div>
+  <script>
+    let BGM = document.getElementById("bgm");
+    let isAudioPlaying = false;
+    let BGMControl = document.getElementById("bgm-control-img");
+    let BGMBackdrop = document.querySelector(".backdrop-bgm");
+    function start(){
+      BGMBackdrop.style.display = "none";
+      BGM.volume = 0.5;
+      BGM.addEventListener("ended",()=>{
+        play();
+      })
+      play();
+    }
+    function toggleMusic(){
+      if(isAudioPlaying){
+        stop();
+      }else{
+        play();
+      }
+    }
+    function stop(){
+      isAudioPlaying = false;
+      BGMControl.src = "./play.svg";
+      BGM.pause();
+    }
+    function play(){
+      isAudioPlaying=true;
+      BGMControl.src = "./pause.svg";
+      BGM.play();
+    }
+  </script>
 </body>
 
 </html>
