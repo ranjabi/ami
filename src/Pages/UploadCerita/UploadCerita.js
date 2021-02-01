@@ -62,7 +62,7 @@ export const UploadCerita = () => {
     ) {
       window.alert("Form belum lengkap");
     } else {
-      console.log(shouldFormClose);
+      // console.log(shouldFormClose);
       if (!shouldFormClose) {
         try {
           const response = await axios.post(
