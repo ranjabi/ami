@@ -1,6 +1,6 @@
 import React from "react";
 import { MainSection } from "./MainSection.js";
-import { Tonamptn } from "./Tonamptn.js";
+// import { Tonamptn } from "./Tonamptn.js";
 import { AboutUsSection } from "./AboutUsSection.js";
 import { SmallSection } from "./SmallSection.js";
 import {Layout} from "../Layout/Layout";
@@ -34,7 +34,7 @@ export const Homepage = () => {
       <img src={Awan} className="Homepage-awan" alt="awan" />
       <Layout>
         <MainSection />
-        <Tonamptn />
+        {/* <Tonamptn /> */}
         <AboutUsSection />
         <SmallSection
           title={VisiTitle}
