@@ -1,0 +1,122 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
+.mainNangor-container {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 42px;
+  }
+
+  p {
+    font-family: LailaMedium;
+    color: white;
+  }
+
+  .headerTempat {
+    width: 100%;
+    padding: 0 20px;
+    padding-bottom: 10px;
+    margin: 3vh 0 2vh;
+    transition: padding, background-color 200ms;
+    position: sticky;
+    top: 0;
+    background: $a_darkPurple;
+    z-index: 5;
+
+    .changeTempat {
+      max-width: 680px;
+      margin: 0 auto;
+      select {
+        border-bottom: 0;
+        text-transform: uppercase;
+        text-align: center;
+        text-align-last: center;
+        option {
+          color: #58298d;
+          text-transform: unset;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .bodyTempat {
+    // max-width: 680px;
+    padding: 20px 20px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    flex-grow: 1;
+    font-family: LailaMedium;
+    color: white;
+    white-space: pre-wrap;
+    // font-size: 18px;
+    .image {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 30px;
+      width: 70%;
+      max-width: 750px;
+      //max-height: 450px;
+      border-radius: 10px;
+    }
+    .defaultImage {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 30px;
+      width: 40%;
+    }
+  }
+}
+
+.video-wrapper {
+  //   padding-bottom: 56.1%;
+  position: relative;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 55vh;
+  height: 55vh;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .mainNangor-container {
+    width: 80%;
+  }
+  .video-wrapper {
+    max-height: 30vh;
+    height: 30vh;
+    // max-width: 60vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainNangor-container {
+    width: 90%;
+  }
+}
