@@ -18,9 +18,9 @@ export const KomikKarikatur = () => {
   const formLink =
     "https://docs.google.com/forms/d/e/1FAIpQLSdrz4ux_il0znw9Y4JdDNZeii8hjon4AV44GIeHycEIxvFnog/viewform?usp=pp_url&entry.1567668559=Karya+1";
 
-  const openForm = () => {
-    window.open(formLink, "_blank");
-  };
+  // const openForm = () => {
+  //   window.open(formLink, "_blank");
+  // };
 
   return (
     <Layout>
