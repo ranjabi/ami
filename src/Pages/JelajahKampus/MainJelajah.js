@@ -8,8 +8,8 @@ import HelmWanita from "../../images/Helm wanita 1.png";
 import ITB from "../../images/itb1920.png";
 
 export const MainJelajah = () => {
-    const ganeshaLink = "https://youtube.com/";
-    const virtualLink = "https://google.com";
+    const ganeshaLink = "http://bit.ly/JKAMI2021";
+    const zoomLink = "http://bit.ly/zoom_jk_ami2021";
 
     return (
 		<Layout>
@@ -30,7 +30,7 @@ export const MainJelajah = () => {
 					<ButtonSection
 						text = "Zoom Explanation Room"
 						image = {ITB}
-						link = {virtualLink}
+						link = {zoomLink}
 					/>
 				</div>
 			</div>
