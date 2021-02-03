@@ -1,9 +1,21 @@
 @import "../../styles//variables";
 @import "../../styles/mixin";
 
-.organogram{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap : 50px;
-    padding : 0 150px;
+.organogram-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    text-align: center;
+  }
+}
+.organogram {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  margin-top: 10vh;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
 }
