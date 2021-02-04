@@ -60,7 +60,7 @@
       grid-template-columns: none;
 
       .button-holder {
-          width: 400px;
+          width: 375px;
       }
     }
   }
@@ -74,9 +74,13 @@
         flex-direction: column-reverse;
         align-items: center;
         grid-template-columns: none;
-  
+
+        img {
+          width: 125px;
+        }
+
         .button-holder {
-            width: 500px;
+            width: 225px;
         }
       }
     }

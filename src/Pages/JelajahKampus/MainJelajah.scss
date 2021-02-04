@@ -7,9 +7,17 @@
   margin-bottom: 4vh;
   h1 {
     text-align: center;
+    margin-bottom: 3vh;
+  }
+  p {
+    margin-top: 5vh;
+    max-width: 700px;
+    font-family: LailaMedium;
+    color: white;
+    margin: 0 auto;
   }
   .jelajah-container{
-    margin-top: 5vh;
+    margin-top: 3vh;
   }
 }
 
@@ -21,6 +29,6 @@
 
 @media (max-width: 600px) {
   .mainJelajah-container {
-    width: 90%;
+    width: 70%;
   }
 }
