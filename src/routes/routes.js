@@ -45,15 +45,15 @@ export const routes = [
     component: MainCerita,
     afterLoggedIn: false,
   },
-  {
-    label: "Yuk Visualisasikan!",
-    path: "/eksibisi",
-    component: Eksibisi,
-    afterLoggedIn: false
-  },
+  // {
+  //   label: "Yuk Visualisasikan!",
+  //   path: "/eksibisi",
+  //   component: Eksibisi,
+  //   afterLoggedIn: false
+  // },
   {
     label: "Eksibisi",
-    path: "/eksibisimaster",
+    path: "/eksibisi",
     component: EksibisiMaster,
     afterLoggedIn: false
   },
@@ -63,12 +63,12 @@ export const routes = [
   //   component: StartGame,
   //   afterLoggedIn: false
   // },
-  {
-    label: "Komik Karikatur",
-    path: "/komikkarikatur/",
-    component: KomikKarikatur,
-    afterLoggedIn: false,
-  },
+  // {
+  //   label: "Komik Karikatur",
+  //   path: "/komikkarikatur/",
+  //   component: KomikKarikatur,
+  //   afterLoggedIn: false,
+  // },
   // {
   //   label: "Jelajah Kampus",
   //   path: "/jelajah",
@@ -170,3 +170,16 @@ export const petaRoutes = [
     path: "/games/peta/5",
   },
 ];
+
+export const eksibisiRoutes = [
+  {
+    label: "Yuk Visualisasikan!",
+    path: "/yukvisualisasikan",
+    component: Eksibisi,
+  },
+  {
+  label: "Komik Karikatur",
+  path: "/komikkarikatur/",
+  component: KomikKarikatur,
+},
+]
