@@ -12,19 +12,16 @@ export const VirtualBooth = () => {
     return (
         <div className="virtualbooth-wrapper">
             <div className="virtualbooth-container">
-                <h1>Virtual Booth 2021</h1>
-                <p>
-                    Virtual Booth fakultas dan program studi hadir di <b>ITB Day 2021!</b> Kunjungi booth-booth virtual semua fakultas
-                    dan prodi yang ada di ITB yang kamu minati. Temui langsung para mahasiwa perwakilan Himpunan Mahasiswa Jurusan
-                    untuk info-info mengenai prodi-prodi di ITB!
-                    <br/>
-                    Jelajah kampus ITB bersama AMI 2021 di ITB Day 2021! Bersama tour guide kami, berkelilinglah mengunjungi gedung-gedung
-                    dan kompleks kampus ITB yang tersohor. Tour yang virtual namun tetap imersif ini dirancang khusus untuk kalian, para 
-                    calon-calon mahasiswa ITB!
-                    
-                </p>
+               
                 <Button text="Virtual Booth" onClick={() => redirectLink(virtualBoothLink)}>
                 </Button>
+                <p>
+                    Virtual Booth fakultas dan program studi hadir di <b>ITB Day 2021!</b> <br />Kunjungi booth-booth virtual semua fakultas
+                    dan prodi yang ada di ITB yang kamu minati. Temui langsung para mahasiwa perwakilan Himpunan Mahasiswa Jurusan
+                    untuk info-info mengenai prodi-prodi di ITB!
+                                        
+                </p>
+                                
             </div>
 
         </div>
