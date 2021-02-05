@@ -1,9 +1,12 @@
 import React from "react";
 import { MainSection } from "./MainSection.js";
 // import { Tonamptn } from "./Tonamptn.js";
+import { Rundown } from "./Rundown.js";
+import { VirtualBooth } from "./VirtualBooth.js";
 import { AboutUsSection } from "./AboutUsSection.js";
 import { SmallSection } from "./SmallSection.js";
 import {Layout} from "../Layout/Layout";
+
 
 import HelmLakiLaki from "../../images/Helm laki-laki 1.png";
 import HelmWanita from "../../images/Helm wanita 1.png";
@@ -35,6 +38,8 @@ export const Homepage = () => {
       <Layout>
         <MainSection />
         {/* <Tonamptn /> */}
+        <VirtualBooth />
+        <Rundown />
         <AboutUsSection />
         <SmallSection
           title={VisiTitle}

@@ -46,6 +46,13 @@
     height: 100%;
     transform: translate(120%, 0%);
   }
+  .MainSection-awan {
+    @include set_glow(0.2);
+    position: absolute;
+    height: 30vw;
+    opacity: 0.1;
+    left: 0;
+  }
 }
 @media (max-width: 480px) {
   .MainSection-wrapper {

@@ -32,12 +32,12 @@ export const routes = [
     component: Organogram,
     afterLoggedIn: false,
   },
-  {
-    label: "Lomba",
-    path: "/lomba",
-    component: MainCompetition,
-    afterLoggedIn: false,
-  },
+  // {
+  //   label: "Lomba",
+  //   path: "/lomba",
+  //   component: MainCompetition,
+  //   afterLoggedIn: false,
+  // },
   {
     label: "Cerita Inspiratif",
     path: "/cerita",
@@ -56,12 +56,12 @@ export const routes = [
   //   component: StartGame,
   //   afterLoggedIn: false
   // },
-  {
-    label: "Komik Karikatur",
-    path: "/komikkarikatur/",
-    component: KomikKarikatur,
-    afterLoggedIn: false,
-  },
+  // {
+  //   label: "Komik Karikatur",
+  //   path: "/komikkarikatur/",
+  //   component: KomikKarikatur,
+  //   afterLoggedIn: false,
+  // },
   {
     label: "Jelajah Kampus",
     path: "/jelajah",
