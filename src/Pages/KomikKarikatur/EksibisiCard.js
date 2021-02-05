@@ -13,9 +13,9 @@ export const EksibisiCard = ({ data }) => {
 
   return (
     <div className="data-container">
-      <Card style={{marginTop: 50, marginBottom: 50}}>
-        <a href={data.link} target="_blank">
-        <Card.Img variant="top" src={data.file_poster} />
+      <Card style={{ marginTop: 50, marginBottom: 50 }}>
+        <a href={data.link} target="_blank" rel="noopener noreferrer">
+          <Card.Img variant="top" src={data.file_poster} />
         </a>
         <Card.Body>
           <Card.Title> {data.judul} </Card.Title>
