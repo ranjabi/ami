@@ -1,7 +1,7 @@
 // import { MainCompetition } from "../Pages/Competition/MainCompetition";
 import { Homepage } from "../Pages/Homepage/Homepage";
 import { MainCerita } from "../Pages/CeritaInspiratif/MainCerita";
-// import { Eksibisi } from "../Pages/Eksibisi/Eksibisi";
+import { EksibisiMaster } from "../Pages/EksibisiMaster/EksibisiMaster";
 import { MenyusunKata } from "../Pages/Game/MenyusunKata";
 // import { StartGame } from "../Pages/Game/Start";
 import { Final } from "../Pages/Game/Final";
@@ -12,6 +12,7 @@ import { KomikKarikatur } from "../Pages/KomikKarikatur/KomikKarikatur";
 // import { MainJelajah } from "../Pages/JelajahKampus/MainJelajah";
 import { JatinangorPage } from "../Pages/JelajahKampus/JatinangorPage";
 // import { Organogram } from "../Pages/Organogram/Organogram";
+import { Eksibisi } from "../Pages/Eksibisi/Eksibisi";
 
 import YukVisualkanImg from "../images/yuk-visualkan.png";
 import CheckTheMissionImg from "../images/check-the-mission.png";
@@ -44,12 +45,18 @@ export const routes = [
     component: MainCerita,
     afterLoggedIn: false,
   },
-  // {
-  //   label: "Eksibisi",
-  //   path: "/eksibisi",
-  //   component: Eksibisi,
-  //   afterLoggedIn: false
-  // },
+  {
+    label: "Yuk Visualisasikan!",
+    path: "/eksibisi",
+    component: Eksibisi,
+    afterLoggedIn: false
+  },
+  {
+    label: "Eksibisi",
+    path: "/eksibisimaster",
+    component: EksibisiMaster,
+    afterLoggedIn: false
+  },
   // {
   //   label: "Games",
   //   path: "/games/",
