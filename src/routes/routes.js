@@ -1,4 +1,4 @@
-import { MainCompetition } from "../Pages/Competition/MainCompetition";
+// import { MainCompetition } from "../Pages/Competition/MainCompetition";
 import { Homepage } from "../Pages/Homepage/Homepage";
 import { MainCerita } from "../Pages/CeritaInspiratif/MainCerita";
 // import { Eksibisi } from "../Pages/Eksibisi/Eksibisi";
@@ -9,7 +9,7 @@ import { Peta } from "../Pages/Game/Peta";
 import { Finish } from "../Pages/Game/Finish";
 import { Organogram } from "../Pages/Organogram/Organogram";
 import { KomikKarikatur } from "../Pages/KomikKarikatur/KomikKarikatur";
-import { MainJelajah } from "../Pages/JelajahKampus/MainJelajah";
+// import { MainJelajah } from "../Pages/JelajahKampus/MainJelajah";
 import { JatinangorPage } from "../Pages/JelajahKampus/JatinangorPage";
 // import { Organogram } from "../Pages/Organogram/Organogram";
 
@@ -56,18 +56,18 @@ export const routes = [
   //   component: StartGame,
   //   afterLoggedIn: false
   // },
-  // {
-  //   label: "Komik Karikatur",
-  //   path: "/komikkarikatur/",
-  //   component: KomikKarikatur,
-  //   afterLoggedIn: false,
-  // },
   {
-    label: "Jelajah Kampus",
-    path: "/jelajah",
-    component: MainJelajah,
-    afterLoggedIn: false
+    label: "Komik Karikatur",
+    path: "/komikkarikatur/",
+    component: KomikKarikatur,
+    afterLoggedIn: false,
   },
+  // {
+  //   label: "Jelajah Kampus",
+  //   path: "/jelajah",
+  //   component: MainJelajah,
+  //   afterLoggedIn: false
+  // },
 ];
 
 export const competitionRoutes = [
