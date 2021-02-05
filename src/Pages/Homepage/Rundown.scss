@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+@import "../../styles/mixin";
+.rundown-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+    padding : 30px 0;
+    padding-bottom: 50px;
+    .rundown-container {
+        width: 100%;
+        max-width: 1000px;
+        padding : 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 {
+        margin-bottom: 60px;
+    }
+    tr {
+        text-align: center;
+        font-family: LailaMedium;
+        color: $f_mainColor;
+        font-size: clamp(18px, 1.2vw, 25px);
+        
+        td {
+            padding : 10px 10px;
+        }
+        th {
+            padding : 20px 10px;
+            font-size: clamp(20px, 1.6vw, 30px);
+            
+            
+        }
+    }
+
+
+    img {
+        width: 80%;
+        margin-bottom: 40px;
+        border : 2px solid $f_black;
+        border-radius: 10px;
+    }
+    button {
+        width: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    
+}
